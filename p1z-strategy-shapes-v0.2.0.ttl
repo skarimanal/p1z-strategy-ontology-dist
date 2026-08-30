@@ -1,0 +1,262 @@
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix p1z:     <https://ontology.pointonezero.com/strategy/core#> .
+@prefix p1zv:    <https://ontology.pointonezero.com/strategy/vocab#> .
+@prefix p1zl:    <https://ontology.pointonezero.com/strategy/lever#> .
+@prefix p1zsh:   <https://ontology.pointonezero.com/strategy/shapes#> .
+
+<https://ontology.pointonezero.com/strategy/shapes> a owl:Ontology ;
+    dct:title "P1Z Strategy Ontology Shapes" ;
+    owl:versionInfo "0.2.0" ;
+    dct:description "SHACL shapes that enforce the immutables. RDF and OWL are open-world and cannot express exhaustiveness or mandatory links; the closed-world guarantees of the ontology (MECE, traceability, structural laws) live in this validation layer. Tier-one schema-conformance evals run these shapes against agent output." .
+
+#################################################################
+# Immutable: every lever moves exactly one value axis.
+# (Levers partition by economic outcome; mechanisms are tags.)
+#################################################################
+
+p1zsh:LeverShape a sh:NodeShape ;
+    sh:targetClass p1z:Lever ;
+    sh:property [
+        sh:path p1z:movesValueAxis ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Every lever must move exactly one value axis. This is the partition principle of the lever taxonomy." ;
+    ] ;
+    sh:property [
+        sh:path ( p1z:movesValueAxis skos:inScheme ) ;
+        sh:hasValue p1zv:ValueAxisScheme ;
+        sh:message "The value axis of a lever must come from the Value Axis scheme." ;
+    ] ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:hasValue p1zl:LeverScheme ;
+        sh:message "Every lever must be declared in the lever scheme." ;
+    ] .
+
+#################################################################
+# Immutable: the initiative is complete or it is not an
+# initiative. Lever, scope, metric, and lifecycle state are
+# mandatory. Traceability is typed and enforced, not prose.
+#################################################################
+
+p1zsh:InitiativeShape a sh:NodeShape ;
+    sh:targetClass p1z:Initiative ;
+    sh:property [
+        sh:path p1z:appliesLever ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class p1z:Lever ;
+        sh:message "Every initiative applies exactly one lever. Larger efforts are modeled as multiple initiatives under a program attribute, keeping the atomic object atomic." ;
+    ] ;
+    sh:property [
+        sh:path p1z:hasScope ;
+        sh:minCount 1 ;
+        sh:class p1z:Scope ;
+        sh:message "Every initiative has at least one scope. Scope separation keeps function names out of the lever taxonomy." ;
+    ] ;
+    sh:property [
+        sh:path p1z:targetsMetric ;
+        sh:minCount 1 ;
+        sh:class p1z:Metric ;
+        sh:message "Every initiative targets at least one metric from the shared metrics taxonomy. A sized impact without a metric anchor is an unanchored number." ;
+    ] ;
+    sh:property [
+        sh:path p1z:lifecycleState ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Every initiative carries exactly one lifecycle state at a time." ;
+    ] ;
+    sh:property [
+        sh:path ( p1z:lifecycleState skos:inScheme ) ;
+        sh:hasValue p1zv:LifecycleScheme ;
+        sh:message "Lifecycle state must come from the lifecycle scheme, which includes terminal states." ;
+    ] ;
+    sh:property [
+        sh:path p1z:hasMechanism ;
+        sh:node [
+            sh:property [
+                sh:path skos:inScheme ;
+                sh:hasValue p1zv:MechanismScheme ;
+            ] ;
+        ] ;
+        sh:message "Mechanism tags must come from the mechanism vocabulary. Mechanisms are facets, never lever categories." ;
+    ] ;
+    sh:property [
+        sh:path p1z:sizedImpact ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+    ] .
+
+# A sized initiative must actually carry a sized impact.
+p1zsh:SizedInitiativeShape a sh:NodeShape ;
+    sh:targetClass p1z:Initiative ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "An initiative in state Sized or beyond must carry a sized impact and an impact treatment (run rate or one time)." ;
+        sh:select """
+            PREFIX p1z: <https://ontology.pointonezero.com/strategy/core#>
+            PREFIX p1zv: <https://ontology.pointonezero.com/strategy/vocab#>
+            SELECT $this WHERE {
+                $this p1z:lifecycleState ?s .
+                FILTER(?s IN (p1zv:Sized, p1zv:Chartered, p1zv:InFlight, p1zv:Realized, p1zv:Banked))
+                FILTER NOT EXISTS { $this p1z:sizedImpact ?v . $this p1z:impactTreatment ?t . }
+            }
+        """ ;
+    ] .
+
+#################################################################
+# Immutable: capabilities are capped at three levels and never
+# carry requirements. Requirements attach to initiatives via
+# capability increments.
+#################################################################
+
+p1zsh:CapabilityShape a sh:NodeShape ;
+    sh:targetClass p1z:Capability ;
+    sh:property [
+        sh:path p1z:capabilityLevel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:maxInclusive 3 ;
+        sh:message "The capability reference model is capped at three levels. Below level three, capability maps degrade into process and feature lists." ;
+    ] ;
+    sh:property [
+        sh:path p1z:hasRequirement ;
+        sh:maxCount 0 ;
+        sh:message "Capabilities never carry requirements. A target capability increment has requirements, and that increment is owned by an initiative." ;
+    ] ;
+    sh:property [
+        sh:path p1z:parentCapability ;
+        sh:maxCount 1 ;
+        sh:class p1z:Capability ;
+    ] .
+
+#################################################################
+# Immutable: traceability of capability change. Every capability
+# increment is delivered by an initiative and increments exactly
+# one capability.
+#################################################################
+
+p1zsh:CapabilityIncrementShape a sh:NodeShape ;
+    sh:targetClass p1z:CapabilityIncrement ;
+    sh:property [
+        sh:path p1z:incrementsCapability ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class p1z:Capability ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath p1z:deliversIncrement ] ;
+        sh:minCount 1 ;
+        sh:message "Every capability increment must be delivered by an initiative. The traceability chain is: strategy sets target maturity, the gap spawns an initiative, requirements attach to the initiative." ;
+    ] .
+
+#################################################################
+# Immutable: requirements are always owned. An orphan
+# requirement is a constraint violation.
+#################################################################
+
+p1zsh:RequirementShape a sh:NodeShape ;
+    sh:targetClass p1z:Requirement ;
+    sh:property [
+        sh:path [ sh:inversePath p1z:hasRequirement ] ;
+        sh:minCount 1 ;
+        sh:message "Every requirement must be attached to an initiative or a capability increment." ;
+    ] .
+
+#################################################################
+# Immutable: observations are qualified. Baseline, benchmark,
+# and target are observation kinds on shared metrics, never
+# properties bolted onto the schema.
+#################################################################
+
+p1zsh:ObservationShape a sh:NodeShape ;
+    sh:targetClass p1z:Observation ;
+    sh:property [
+        sh:path p1z:observes ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class p1z:Metric ;
+    ] ;
+    sh:property [
+        sh:path p1z:observationKind ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Every observation declares its kind: baseline, benchmark, or target." ;
+    ] ;
+    sh:property [
+        sh:path ( p1z:observationKind skos:inScheme ) ;
+        sh:hasValue p1zv:ObservationKindScheme ;
+    ] ;
+    sh:property [
+        sh:path p1z:value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+#################################################################
+# Immutable: metrics declare their class within the single
+# metrics taxonomy.
+#################################################################
+
+p1zsh:MetricShape a sh:NodeShape ;
+    sh:targetClass p1z:Metric ;
+    sh:property [
+        sh:path p1z:metricClass ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Every metric declares whether it is a profit and loss line, a balance sheet line, or an operational driver." ;
+    ] .
+
+#################################################################
+# Immutable: a strategy binding belongs to exactly one company,
+# and each capability position makes exactly one differentiation
+# choice. This is the reference for strategy-coherence evals.
+#################################################################
+
+p1zsh:StrategyBindingShape a sh:NodeShape ;
+    sh:targetClass p1z:StrategyBinding ;
+    sh:property [
+        sh:path p1z:forCompany ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class p1z:Company ;
+    ] .
+
+p1zsh:CapabilityPositionShape a sh:NodeShape ;
+    sh:targetClass p1z:CapabilityPosition ;
+    sh:property [
+        sh:path p1z:positionedCapability ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class p1z:Capability ;
+    ] ;
+    sh:property [
+        sh:path p1z:differentiationChoice ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ( p1z:differentiationChoice skos:inScheme ) ;
+        sh:hasValue p1zv:DifferentiationScheme ;
+    ] .
+
+#################################################################
+# Value streams are overlays: composed of at least one process,
+# never empty labels.
+#################################################################
+
+p1zsh:ValueStreamShape a sh:NodeShape ;
+    sh:targetClass p1z:ValueStream ;
+    sh:property [
+        sh:path p1z:composedOfProcess ;
+        sh:minCount 1 ;
+        sh:class p1z:Process ;
+        sh:message "A value stream is defined by the APQC processes it sequences. An empty value stream is a label, not a scope." ;
+    ] .

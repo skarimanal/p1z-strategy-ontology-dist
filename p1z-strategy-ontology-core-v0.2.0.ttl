@@ -1,0 +1,391 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix p1z:     <https://ontology.pointonezero.com/strategy/core#> .
+@prefix p1zv:    <https://ontology.pointonezero.com/strategy/vocab#> .
+@prefix p1zl:    <https://ontology.pointonezero.com/strategy/lever#> .
+
+#################################################################
+# Ontology header
+#################################################################
+
+<https://ontology.pointonezero.com/strategy/core> a owl:Ontology ;
+    dct:title "P1Z Strategy Ontology (Core)" ;
+    owl:versionInfo "0.2.0" ;
+    dct:description "The durable core of the P1Z strategy ontology. It covers what value exists and where it sits: value axes, levers, scope, capabilities, metrics, and the initiative object at the center. It serves as the base truth for evals-driven development. Delivery machinery, artifacts, and methods are deliberately excluded from the core and live in separate, faster-changing modules. Client strategy is never encoded here; it is configuration expressed through StrategyBinding instances. Industry ontologies are separate modules that import this core: they add and specialize (industry levers declare skos:broader to a core lever, industry capability maps type against core classes) and never redefine or contradict a core term. Each module versions independently, and eval results pin to the pair of core and module versions." ;
+    dct:creator "Point One Zero, Inc." .
+
+#################################################################
+# Node types (OWL classes)
+# Admission rule: a concept becomes a class only if it cannot be
+# a facet value or an attribute, and it becomes a node type only
+# if it needs its own identity and lifecycle.
+#################################################################
+
+p1z:Initiative a owl:Class ;
+    rdfs:label "Initiative" ;
+    rdfs:comment "The dynamic hub of the ontology. A value lever applied to a scope, with a sized impact, an owner, a wave assignment, and a lifecycle state. Roadmaps and value trackers are computed projections of initiatives, never stored structures." .
+
+p1z:Capability a owl:Class ;
+    rdfs:label "Business Capability" ;
+    rdfs:comment "The stable backbone. Describes what the enterprise can do, never who does it. Decomposition is capped at three levels. Capabilities anchor maturity, differentiation choices, architecture, and AI agent scope. Capabilities never carry requirements." .
+
+p1z:CapabilityIncrement a owl:Class ;
+    rdfs:label "Capability Increment" ;
+    rdfs:comment "A target change in the maturity of one capability, owned and delivered by an initiative. Requirements attach here or to the initiative, never to the capability itself." .
+
+p1z:Requirement a owl:Class ;
+    rdfs:label "Requirement" ;
+    rdfs:comment "A requirement owned by an initiative or a capability increment. Never attached to a capability." .
+
+p1z:Metric a owl:Class ;
+    rdfs:label "Metric" ;
+    rdfs:comment "A member of the single metrics taxonomy: profit and loss lines, balance sheet lines, and the operational drivers beneath them. Levers, capabilities, and initiatives reference metrics; none of them owns the taxonomy. Metrics decompose into driver trees through the decomposesTo relation." .
+
+p1z:Observation a owl:Class ;
+    rdfs:label "Metric Observation" ;
+    rdfs:comment "A qualified observation on a metric: kind (baseline, benchmark, or target), value, date, and source. Benchmarks are not a separate world; they are reference observations on the same metrics that levers point at. Observations are instance data and keep the schema layer clean." .
+
+p1z:Scope a owl:Class ;
+    rdfs:label "Scope" ;
+    rdfs:comment "The thing a lever is applied to. Scope separation keeps function names out of the lever taxonomy." .
+
+p1z:FunctionalDomain a owl:Class ;
+    rdfs:subClassOf p1z:Scope ;
+    rdfs:label "Functional Domain" ;
+    rdfs:comment "An APQC-referenced node used as scope. Function and process are one externally maintained APQC hierarchy, never two taxonomies: functions are the top levels and processes are the decomposition beneath them, distinguished by apqcLevel, not by separate models." .
+
+p1z:OrgUnit a owl:Class ;
+    rdfs:subClassOf p1z:Scope ;
+    rdfs:label "Organizational Unit" .
+
+p1z:Geography a owl:Class ;
+    rdfs:subClassOf p1z:Scope ;
+    rdfs:label "Geography" .
+
+p1z:Process a owl:Class ;
+    rdfs:subClassOf p1z:FunctionalDomain ;
+    rdfs:label "Process" ;
+    rdfs:comment "An APQC-referenced process: a deeper node of the same APQC hierarchy as FunctionalDomain. Processes and capabilities never nest in either direction; they connect only through the drawsOnCapability cross-map." .
+
+p1z:ValueStream a owl:Class ;
+    rdfs:subClassOf p1z:Scope ;
+    rdfs:label "Value Stream" ;
+    rdfs:comment "An end-to-end flow lens (for example order to cash) composed of APQC processes through the composedOfProcess cross-map. A value stream is an overlay, not a dimension: it fails the axis admission ladder because it is defined by the processes it sequences. The three scope lenses divide the work: function for coverage, value stream for flow, capability for investment." .
+
+p1z:Lever a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Value Lever" ;
+    rdfs:comment "A lever is a SKOS concept in the lever scheme, additionally typed for validation. Every lever moves exactly one value axis. Mechanisms such as digital and AI are facet tags on initiatives, never sibling categories of levers." .
+
+p1z:Company a owl:Class ;
+    rdfs:label "Company" ;
+    rdfs:comment "A client organization. Client specifics never enter the core ontology; they attach to the company through its strategy binding." .
+
+p1z:StrategyBinding a owl:Class ;
+    rdfs:label "Strategy Binding" ;
+    rdfs:comment "The per-company configuration over the invariant core: capability positions (target maturity and differentiation choice), lever priorities, and metric targets. This is how one ontology serves many business models, and it is the reference for tier-two strategy-coherence evals." .
+
+p1z:CapabilityPosition a owl:Class ;
+    rdfs:label "Capability Position" ;
+    rdfs:comment "One element of a strategy binding: a capability, the differentiation choice made for it, and its target maturity." .
+
+#################################################################
+# Object properties
+#################################################################
+
+p1z:appliesLever a owl:ObjectProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range p1z:Lever ;
+    rdfs:label "applies lever" .
+
+p1z:hasMechanism a owl:ObjectProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range skos:Concept ;
+    rdfs:label "has mechanism" ;
+    rdfs:comment "Facet tag from the mechanism vocabulary. The mechanism vocabulary is versioned independently of the core because its labels drift faster than the accounting spine." .
+
+p1z:hasScope a owl:ObjectProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range p1z:Scope ;
+    rdfs:label "has scope" .
+
+p1z:targetsMetric a owl:ObjectProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range p1z:Metric ;
+    rdfs:label "targets metric" .
+
+p1z:lifecycleState a owl:ObjectProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range skos:Concept ;
+    rdfs:label "lifecycle state" .
+
+p1z:impactTreatment a owl:ObjectProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range skos:Concept ;
+    rdfs:label "impact treatment" .
+
+p1z:initiativeClass a owl:ObjectProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range skos:Concept ;
+    rdfs:label "initiative class" .
+
+p1z:deliversIncrement a owl:ObjectProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range p1z:CapabilityIncrement ;
+    rdfs:label "delivers increment" .
+
+p1z:incrementsCapability a owl:ObjectProperty ;
+    rdfs:domain p1z:CapabilityIncrement ;
+    rdfs:range p1z:Capability ;
+    rdfs:label "increments capability" .
+
+p1z:hasRequirement a owl:ObjectProperty ;
+    rdfs:range p1z:Requirement ;
+    rdfs:label "has requirement" ;
+    rdfs:comment "Domain is an initiative or a capability increment. Attachment to a capability is a constraint violation enforced by the shapes layer." .
+
+p1z:parentCapability a owl:ObjectProperty ;
+    rdfs:domain p1z:Capability ;
+    rdfs:range p1z:Capability ;
+    rdfs:label "parent capability" .
+
+p1z:composedOfProcess a owl:ObjectProperty ;
+    rdfs:domain p1z:ValueStream ;
+    rdfs:range p1z:Process ;
+    rdfs:label "composed of process" ;
+    rdfs:comment "The cross-map from value streams to the APQC processes they sequence. Ordering within the stream is instance detail, not schema." .
+
+p1z:parentProcess a owl:ObjectProperty ;
+    rdfs:domain p1z:FunctionalDomain ;
+    rdfs:range p1z:FunctionalDomain ;
+    rdfs:label "parent process" ;
+    rdfs:comment "The single APQC hierarchy relation." .
+
+p1z:drawsOnCapability a owl:ObjectProperty ;
+    rdfs:domain p1z:Process ;
+    rdfs:range p1z:Capability ;
+    rdfs:label "draws on capability" ;
+    rdfs:comment "The many-to-many cross-map between processes and capabilities. APQC provides MECE coverage; the capability map provides the investment and differentiation lens." .
+
+p1z:movesValueAxis a owl:ObjectProperty ;
+    rdfs:domain p1z:Lever ;
+    rdfs:range skos:Concept ;
+    rdfs:label "moves value axis" ;
+    rdfs:comment "The partition principle of the lever taxonomy. Every lever moves exactly one value axis." .
+
+p1z:decomposesTo a owl:ObjectProperty ;
+    rdfs:domain p1z:Metric ;
+    rdfs:range p1z:Metric ;
+    rdfs:label "decomposes to" ;
+    rdfs:comment "Driver tree structure inside the metrics taxonomy." .
+
+p1z:metricClass a owl:ObjectProperty ;
+    rdfs:domain p1z:Metric ;
+    rdfs:range skos:Concept ;
+    rdfs:label "metric class" .
+
+p1z:observes a owl:ObjectProperty ;
+    rdfs:domain p1z:Observation ;
+    rdfs:range p1z:Metric ;
+    rdfs:label "observes" .
+
+p1z:observationKind a owl:ObjectProperty ;
+    rdfs:domain p1z:Observation ;
+    rdfs:range skos:Concept ;
+    rdfs:label "observation kind" .
+
+p1z:forCompany a owl:ObjectProperty ;
+    rdfs:domain p1z:StrategyBinding ;
+    rdfs:range p1z:Company ;
+    rdfs:label "for company" .
+
+p1z:positionsCapability a owl:ObjectProperty ;
+    rdfs:domain p1z:StrategyBinding ;
+    rdfs:range p1z:CapabilityPosition ;
+    rdfs:label "positions capability" .
+
+p1z:positionedCapability a owl:ObjectProperty ;
+    rdfs:domain p1z:CapabilityPosition ;
+    rdfs:range p1z:Capability ;
+    rdfs:label "positioned capability" .
+
+p1z:differentiationChoice a owl:ObjectProperty ;
+    rdfs:domain p1z:CapabilityPosition ;
+    rdfs:range skos:Concept ;
+    rdfs:label "differentiation choice" .
+
+p1z:prioritizesLever a owl:ObjectProperty ;
+    rdfs:domain p1z:StrategyBinding ;
+    rdfs:range p1z:Lever ;
+    rdfs:label "prioritizes lever" .
+
+#################################################################
+# Datatype properties
+#################################################################
+
+p1z:sizedImpact a owl:DatatypeProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "sized impact" .
+
+p1z:owner a owl:DatatypeProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range xsd:string ;
+    rdfs:label "owner" ;
+    rdfs:comment "Actors are attributes, not axes." .
+
+p1z:wave a owl:DatatypeProperty ;
+    rdfs:domain p1z:Initiative ;
+    rdfs:range xsd:string ;
+    rdfs:label "wave" .
+
+p1z:capabilityLevel a owl:DatatypeProperty ;
+    rdfs:domain p1z:Capability ;
+    rdfs:range xsd:integer ;
+    rdfs:label "capability level" ;
+    rdfs:comment "1 to 3. The three-level cap is enforced by the shapes layer." .
+
+p1z:apqcId a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "APQC reference" ;
+    rdfs:comment "Applies to functional domains and processes." .
+
+p1z:apqcLevel a owl:DatatypeProperty ;
+    rdfs:domain p1z:FunctionalDomain ;
+    rdfs:range xsd:integer ;
+    rdfs:label "APQC level" ;
+    rdfs:comment "Level within the single APQC hierarchy. Top levels are functions; deeper levels are processes." .
+
+p1z:maturityTarget a owl:DatatypeProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:label "maturity target" .
+
+p1z:maturityCurrent a owl:DatatypeProperty ;
+    rdfs:domain p1z:Capability ;
+    rdfs:range xsd:integer ;
+    rdfs:label "current maturity" .
+
+p1z:value a owl:DatatypeProperty ;
+    rdfs:domain p1z:Observation ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "value" .
+
+p1z:asOf a owl:DatatypeProperty ;
+    rdfs:domain p1z:Observation ;
+    rdfs:range xsd:date ;
+    rdfs:label "as of" .
+
+p1z:sourceNote a owl:DatatypeProperty ;
+    rdfs:domain p1z:Observation ;
+    rdfs:range xsd:string ;
+    rdfs:label "source note" .
+
+p1z:isTerminal a owl:DatatypeProperty ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "is terminal state" .
+
+#################################################################
+# Facet vocabularies (SKOS concept schemes)
+# Facets multiply expressiveness without adding node types.
+#################################################################
+
+p1zv:ValueAxisScheme a skos:ConceptScheme ;
+    skos:prefLabel "Value Axes" ;
+    skos:definition "The MECE outcome partition at the top of the lever taxonomy, resting on accounting identities. Every dollar of impact is revenue, cost, or capital." .
+
+p1zv:Revenue a skos:Concept ; skos:inScheme p1zv:ValueAxisScheme ; skos:prefLabel "Revenue" .
+p1zv:Cost a skos:Concept ; skos:inScheme p1zv:ValueAxisScheme ; skos:prefLabel "Cost" .
+p1zv:Capital a skos:Concept ; skos:inScheme p1zv:ValueAxisScheme ; skos:prefLabel "Capital" ;
+    skos:definition "Working capital and capital expenditure productivity." .
+
+p1zv:MechanismScheme a skos:ConceptScheme ;
+    skos:prefLabel "Mechanisms" ;
+    owl:versionInfo "0.1.0" ;
+    skos:definition "Orthogonal mechanism tags applied to initiatives. A digital strategy engagement is a bundle of levers carrying the digital mechanism tags. This vocabulary is versioned independently because its labels drift faster than the core." .
+
+p1zv:ProcessRedesign a skos:Concept ; skos:inScheme p1zv:MechanismScheme ; skos:prefLabel "Process redesign" .
+p1zv:Automation a skos:Concept ; skos:inScheme p1zv:MechanismScheme ; skos:prefLabel "Automation" .
+p1zv:DataAndAI a skos:Concept ; skos:inScheme p1zv:MechanismScheme ; skos:prefLabel "Data and AI" .
+p1zv:Platform a skos:Concept ; skos:inScheme p1zv:MechanismScheme ; skos:prefLabel "Platform" .
+
+p1zv:LifecycleScheme a skos:ConceptScheme ;
+    skos:prefLabel "Initiative Lifecycle States" ;
+    skos:definition "Mutually exclusive at a point in time and exhaustive because terminal states are included." .
+
+p1zv:Idea a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "Idea" ; p1z:isTerminal false .
+p1zv:Sized a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "Sized" ; p1z:isTerminal false .
+p1zv:Chartered a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "Chartered" ; p1z:isTerminal false .
+p1zv:InFlight a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "In flight" ; p1z:isTerminal false .
+p1zv:Realized a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "Realized" ; p1z:isTerminal false .
+p1zv:Banked a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "Banked" ; p1z:isTerminal true .
+p1zv:RejectedAtSizing a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "Rejected at sizing" ; p1z:isTerminal true .
+p1zv:Deprioritized a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "Deprioritized" ; p1z:isTerminal true .
+p1zv:KilledInFlight a skos:Concept ; skos:inScheme p1zv:LifecycleScheme ; skos:prefLabel "Killed in flight" ; p1z:isTerminal true .
+
+p1zv:ImpactTreatmentScheme a skos:ConceptScheme ;
+    skos:prefLabel "Impact Treatment" .
+
+p1zv:RunRate a skos:Concept ; skos:inScheme p1zv:ImpactTreatmentScheme ; skos:prefLabel "Run rate" .
+p1zv:OneTime a skos:Concept ; skos:inScheme p1zv:ImpactTreatmentScheme ; skos:prefLabel "One time" .
+
+p1zv:InitiativeClassScheme a skos:ConceptScheme ;
+    skos:prefLabel "Initiative Class" .
+
+p1zv:QuickWin a skos:Concept ; skos:inScheme p1zv:InitiativeClassScheme ; skos:prefLabel "Quick win" .
+p1zv:Structural a skos:Concept ; skos:inScheme p1zv:InitiativeClassScheme ; skos:prefLabel "Structural" .
+
+p1zv:ObservationKindScheme a skos:ConceptScheme ;
+    skos:prefLabel "Observation Kinds" ;
+    skos:definition "Baseline is actual performance, benchmark is a reference value, target is the committed ambition. All three are observations on the same metric." .
+
+p1zv:Baseline a skos:Concept ; skos:inScheme p1zv:ObservationKindScheme ; skos:prefLabel "Baseline" .
+p1zv:Benchmark a skos:Concept ; skos:inScheme p1zv:ObservationKindScheme ; skos:prefLabel "Benchmark" .
+p1zv:Target a skos:Concept ; skos:inScheme p1zv:ObservationKindScheme ; skos:prefLabel "Target" .
+
+p1zv:DifferentiationScheme a skos:ConceptScheme ;
+    skos:prefLabel "Differentiation Choices" ;
+    skos:definition "The strategic posture chosen for a capability inside a strategy binding." .
+
+p1zv:Differentiate a skos:Concept ; skos:inScheme p1zv:DifferentiationScheme ; skos:prefLabel "Differentiate" .
+p1zv:Parity a skos:Concept ; skos:inScheme p1zv:DifferentiationScheme ; skos:prefLabel "Parity" .
+p1zv:Commoditize a skos:Concept ; skos:inScheme p1zv:DifferentiationScheme ; skos:prefLabel "Commoditize" .
+
+p1zv:MetricClassScheme a skos:ConceptScheme ;
+    skos:prefLabel "Metric Classes" .
+
+p1zv:PnLLine a skos:Concept ; skos:inScheme p1zv:MetricClassScheme ; skos:prefLabel "Profit and loss line" .
+p1zv:BalanceSheetLine a skos:Concept ; skos:inScheme p1zv:MetricClassScheme ; skos:prefLabel "Balance sheet line" .
+p1zv:OperationalDriver a skos:Concept ; skos:inScheme p1zv:MetricClassScheme ; skos:prefLabel "Operational driver" .
+
+#################################################################
+# Lever taxonomy (seed, not closed)
+# Partition principle: the value axis the lever moves.
+# Closure of this list is a governed domain judgment, not a
+# derivation, and is a v0.2 population task.
+#################################################################
+
+p1zl:LeverScheme a skos:ConceptScheme ;
+    skos:prefLabel "Value Levers" ;
+    skos:editorialNote "Seed list. Levers are added or closed only through governed change to the canonical model." .
+
+p1zl:PricingAndDiscountLeakage a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Pricing and discount leakage" ; p1z:movesValueAxis p1zv:Revenue .
+p1zl:CommercialExcellence a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Commercial excellence" ; p1z:movesValueAxis p1zv:Revenue .
+p1zl:ChannelMix a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Channel mix" ; p1z:movesValueAxis p1zv:Revenue .
+p1zl:CrossSell a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Cross-sell and retention" ; p1z:movesValueAxis p1zv:Revenue .
+p1zl:NewProduct a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "New product introduction" ; p1z:movesValueAxis p1zv:Revenue .
+p1zl:GeographicEntry a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Geographic entry" ; p1z:movesValueAxis p1zv:Revenue .
+
+p1zl:ZeroBasedSpend a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Zero-based spend" ; p1z:movesValueAxis p1zv:Cost .
+p1zl:Procurement a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Procurement and spend management" ; p1z:movesValueAxis p1zv:Cost .
+p1zl:SpansAndLayers a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Spans and layers" ; p1z:movesValueAxis p1zv:Cost .
+p1zl:FootprintAndNetwork a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Footprint and network" ; p1z:movesValueAxis p1zv:Cost .
+p1zl:SgaProductivity a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "SG&A productivity" ; p1z:movesValueAxis p1zv:Cost .
+p1zl:CogsAndLean a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "COGS and lean operations" ; p1z:movesValueAxis p1zv:Cost .
+
+p1zl:WorkingCapitalRelease a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Working capital release" ; p1z:movesValueAxis p1zv:Capital .
+p1zl:CapexProductivity a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Capex productivity" ; p1z:movesValueAxis p1zv:Capital .
+p1zl:AssetUtilization a p1z:Lever ; skos:inScheme p1zl:LeverScheme ; skos:prefLabel "Asset utilization" ; p1z:movesValueAxis p1zv:Capital .

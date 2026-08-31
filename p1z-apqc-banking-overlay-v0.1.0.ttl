@@ -1,0 +1,1965 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix p1z:  <https://ontology.pointonezero.com/strategy/core#> .
+@prefix p1zv: <https://ontology.pointonezero.com/strategy/vocab#> .
+@prefix apqc: <https://ontology.pointonezero.com/strategy/apqc#> .
+
+<https://ontology.pointonezero.com/strategy/apqc/banking> a owl:Ontology ;
+    dct:title "P1Z Industry Overlay: APQC Banking PCF" ;
+    owl:versionInfo "0.1.0" ;
+    dct:source "APQC Process Classification Framework (PCF), Banking, Excel Version 8.0" ;
+    dct:description "Banking industry overlay module: a separate module importing the cross-industry spine (PCF v8.0, spine v0.3.0, core v0.4.0). Adds and specializes only, never redefines a core or spine term: industry-new process elements (with parentProcess links into the spine or this overlay) and industry-new metrics with their cross-maps. Shared elements and metrics remain asserted solely by the spine and cross-industry metrics files. Version-skew editorial differences observed in the industry workbook (label case changes, metric text polish, coarser metric placements) are deliberately not asserted; the cross-industry v8.0 files are canonical for shared content." ;
+    dct:rights "APQC Process Classification Framework (PCF) is an open standard developed by APQC, a nonprofit that promotes benchmarking and best practices worldwide. The PCF is intended to facilitate organizational improvement through process management and benchmarking, regardless of industry, size, or geography. To download the full PCF or industry-specific versions of the PCF, as well as associated measures and benchmarking, please visit www.apqc.org/pcf." .
+
+# Industry-new process elements (114, levels 1-4)
+
+apqc:PCF14018 a p1z:Process ;
+    skos:prefLabel "Integrate channels" ;
+    p1z:apqcId "14018" ;
+    p1z:apqcHierarchyId "3.2.5.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF20006 .
+
+apqc:PCF14020 a p1z:Process ;
+    skos:prefLabel "Perform data acquisition and storage" ;
+    p1z:apqcId "14020" ;
+    p1z:apqcHierarchyId "3.2.5.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF20006 .
+
+apqc:PCF10198 a p1z:Process ;
+    skos:prefLabel "Enter orders into system" ;
+    p1z:apqcId "10198" ;
+    p1z:apqcHierarchyId "3.5.4.5" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Analyzing all data relating to sales orders by entering it into a centralized repository, and using the insights generated to create opportunities for cross-/up-selling. Maintain up-to-date records of sales, along with current status. Include all sales activity with relevant information about the associated customers, and identify patterns in the data. Glean insights from these patterns to persuade customers to purchase additional offerings or upgrade purchased products/services." ;
+    p1z:parentProcess apqc:PCF10185 .
+
+apqc:PCF17404 a p1z:Process ;
+    skos:prefLabel "Identify / perform cross-sell / up-sell activity" ;
+    p1z:apqcId "17404" ;
+    p1z:apqcHierarchyId "3.5.4.6" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable true ;
+    skos:definition "Utilizing customer inquiries as opportunities to either provide a comparable service to the one in question, offer additional complimentary service, or suggest a service that is better than what was initially offered." ;
+    p1z:parentProcess apqc:PCF10185 .
+
+apqc:PCF13943 a p1z:Process ;
+    skos:prefLabel "Perform financial settlements" ;
+    p1z:apqcId "13943" ;
+    p1z:apqcHierarchyId "4.2.4.8" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10279 .
+
+apqc:PCF17417 a p1z:Process ;
+    skos:prefLabel "Open Accounts" ;
+    p1z:apqcId "17417" ;
+    p1z:apqcHierarchyId "5.4.4" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable true ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF13964 a p1z:Process ;
+    skos:prefLabel "Analyze customer creditworthiness" ;
+    p1z:apqcId "13964" ;
+    p1z:apqcHierarchyId "5.4.4.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17417 .
+
+apqc:PCF13953 a p1z:Process ;
+    skos:prefLabel "Apply Anti-Money Laundering (AML) policy" ;
+    p1z:apqcId "13953" ;
+    p1z:apqcHierarchyId "5.4.4.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17417 .
+
+apqc:PCF13957 a p1z:Process ;
+    skos:prefLabel "Apply customer identification policy" ;
+    p1z:apqcId "13957" ;
+    p1z:apqcHierarchyId "5.4.4.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17417 .
+
+apqc:PCF17418 a p1z:Process ;
+    skos:prefLabel "Apply product conditions" ;
+    p1z:apqcId "17418" ;
+    p1z:apqcHierarchyId "5.4.4.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17417 .
+
+apqc:PCF17419 a p1z:Process ;
+    skos:prefLabel "Apply product pricing" ;
+    p1z:apqcId "17419" ;
+    p1z:apqcHierarchyId "5.4.4.5" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17417 .
+
+apqc:PCF17420 a p1z:Process ;
+    skos:prefLabel "Evaluate collateral/guarantee" ;
+    p1z:apqcId "17420" ;
+    p1z:apqcHierarchyId "5.4.4.6" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17417 .
+
+apqc:PCF17421 a p1z:Process ;
+    skos:prefLabel "Set up and activate an account" ;
+    p1z:apqcId "17421" ;
+    p1z:apqcHierarchyId "5.4.4.7" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17417 .
+
+apqc:PCF13961 a p1z:Process ;
+    skos:prefLabel "Fund and disburse proceeds" ;
+    p1z:apqcId "13961" ;
+    p1z:apqcHierarchyId "5.4.4.8" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17417 .
+
+apqc:PCF17422 a p1z:Process ;
+    skos:prefLabel "Maintain accounts" ;
+    p1z:apqcId "17422" ;
+    p1z:apqcHierarchyId "5.4.5" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable true ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF13962 a p1z:Process ;
+    skos:prefLabel "Monitor account status" ;
+    p1z:apqcId "13962" ;
+    p1z:apqcHierarchyId "5.4.5.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17423 a p1z:Process ;
+    skos:prefLabel "Manage fees / interest / commissions" ;
+    p1z:apqcId "17423" ;
+    p1z:apqcHierarchyId "5.4.5.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17424 a p1z:Process ;
+    skos:prefLabel "Monitor account transactions" ;
+    p1z:apqcId "17424" ;
+    p1z:apqcHierarchyId "5.4.5.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17425 a p1z:Process ;
+    skos:prefLabel "Review collateral/guarantee periodically" ;
+    p1z:apqcId "17425" ;
+    p1z:apqcHierarchyId "5.4.5.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17426 a p1z:Process ;
+    skos:prefLabel "Maintain internal accounts" ;
+    p1z:apqcId "17426" ;
+    p1z:apqcHierarchyId "5.4.5.5" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF13950 a p1z:Process ;
+    skos:prefLabel "Reconcile accounts" ;
+    p1z:apqcId "13950" ;
+    p1z:apqcHierarchyId "5.4.5.6" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17427 a p1z:Process ;
+    skos:prefLabel "Monitor product profitability" ;
+    p1z:apqcId "17427" ;
+    p1z:apqcHierarchyId "5.4.5.7" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17428 a p1z:Process ;
+    skos:prefLabel "Review product portfolio" ;
+    p1z:apqcId "17428" ;
+    p1z:apqcHierarchyId "5.4.5.8" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17429 a p1z:Process ;
+    skos:prefLabel "Perform settlement" ;
+    p1z:apqcId "17429" ;
+    p1z:apqcHierarchyId "5.4.5.9" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF13963 a p1z:Process ;
+    skos:prefLabel "Monitor and manage events" ;
+    p1z:apqcId "13963" ;
+    p1z:apqcHierarchyId "5.4.5.10" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17430 a p1z:Process ;
+    skos:prefLabel "Record adjustments in system of record" ;
+    p1z:apqcId "17430" ;
+    p1z:apqcHierarchyId "5.4.5.11" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17422 .
+
+apqc:PCF17431 a p1z:Process ;
+    skos:prefLabel "Close accounts" ;
+    p1z:apqcId "17431" ;
+    p1z:apqcHierarchyId "5.4.6" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable true ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF17432 a p1z:Process ;
+    skos:prefLabel "Authenticate customer instruction" ;
+    p1z:apqcId "17432" ;
+    p1z:apqcHierarchyId "5.4.6.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17431 .
+
+apqc:PCF17433 a p1z:Process ;
+    skos:prefLabel "Manage fees / interest / commissions due" ;
+    p1z:apqcId "17433" ;
+    p1z:apqcHierarchyId "5.4.6.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17431 .
+
+apqc:PCF17434 a p1z:Process ;
+    skos:prefLabel "Determine final settlement amount" ;
+    p1z:apqcId "17434" ;
+    p1z:apqcHierarchyId "5.4.6.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17431 .
+
+apqc:PCF17435 a p1z:Process ;
+    skos:prefLabel "Record account closure in system of record" ;
+    p1z:apqcId "17435" ;
+    p1z:apqcHierarchyId "5.4.6.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17431 .
+
+apqc:PCF17436 a p1z:Process ;
+    skos:prefLabel "Manage cash" ;
+    p1z:apqcId "17436" ;
+    p1z:apqcHierarchyId "5.4.7" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF17437 a p1z:Process ;
+    skos:prefLabel "Develop and execute store cash management policy and procedures" ;
+    p1z:apqcId "17437" ;
+    p1z:apqcHierarchyId "5.4.7.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17436 .
+
+apqc:PCF17438 a p1z:Process ;
+    skos:prefLabel "Sign out cash drawers" ;
+    p1z:apqcId "17438" ;
+    p1z:apqcHierarchyId "5.4.7.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17436 .
+
+apqc:PCF17439 a p1z:Process ;
+    skos:prefLabel "Close and reconcile cash drawers" ;
+    p1z:apqcId "17439" ;
+    p1z:apqcHierarchyId "5.4.7.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17436 .
+
+apqc:PCF17440 a p1z:Process ;
+    skos:prefLabel "Reconcile receipts and payments" ;
+    p1z:apqcId "17440" ;
+    p1z:apqcHierarchyId "5.4.7.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17436 .
+
+apqc:PCF16551 a p1z:Process ;
+    skos:prefLabel "Deposit cash" ;
+    p1z:apqcId "16551" ;
+    p1z:apqcHierarchyId "5.4.7.5" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17436 .
+
+apqc:PCF13959 a p1z:Process ;
+    skos:prefLabel "Service bank customers" ;
+    p1z:apqcId "13959" ;
+    p1z:apqcHierarchyId "5.4.8" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable true ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF13948 a p1z:Process ;
+    skos:prefLabel "Provide account/product statements" ;
+    p1z:apqcId "13948" ;
+    p1z:apqcHierarchyId "5.4.8.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17441 a p1z:Process ;
+    skos:prefLabel "Manage repayments" ;
+    p1z:apqcId "17441" ;
+    p1z:apqcHierarchyId "5.4.8.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17442 a p1z:Process ;
+    skos:prefLabel "Manage negotiated changes" ;
+    p1z:apqcId "17442" ;
+    p1z:apqcHierarchyId "5.4.8.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    skos:definition "(e.g. interest / fees/ tenure / structure)" ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17443 a p1z:Process ;
+    skos:prefLabel "Modify customer information" ;
+    p1z:apqcId "17443" ;
+    p1z:apqcHierarchyId "5.4.8.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17444 a p1z:Process ;
+    skos:prefLabel "Review and extend credit" ;
+    p1z:apqcId "17444" ;
+    p1z:apqcHierarchyId "5.4.8.5" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17445 a p1z:Process ;
+    skos:prefLabel "Price transaction" ;
+    p1z:apqcId "17445" ;
+    p1z:apqcHierarchyId "5.4.8.6" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF13968 a p1z:Process ;
+    skos:prefLabel "Structure and negotiate transaction" ;
+    p1z:apqcId "13968" ;
+    p1z:apqcHierarchyId "5.4.8.7" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17446 a p1z:Process ;
+    skos:prefLabel "Perform syndication" ;
+    p1z:apqcId "17446" ;
+    p1z:apqcHierarchyId "5.4.8.8" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17447 a p1z:Process ;
+    skos:prefLabel "Perform securitization" ;
+    p1z:apqcId "17447" ;
+    p1z:apqcHierarchyId "5.4.8.9" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17448 a p1z:Process ;
+    skos:prefLabel "Administer third party accounts (e.g. escrow, endowment, trusts)" ;
+    p1z:apqcId "17448" ;
+    p1z:apqcHierarchyId "5.4.8.10" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17449 a p1z:Process ;
+    skos:prefLabel "Perform cash management" ;
+    p1z:apqcId "17449" ;
+    p1z:apqcHierarchyId "5.4.8.11" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17450 a p1z:Process ;
+    skos:prefLabel "Perform remittances" ;
+    p1z:apqcId "17450" ;
+    p1z:apqcHierarchyId "5.4.8.12" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF13973 a p1z:Process ;
+    skos:prefLabel "Prepare deal confirmations" ;
+    p1z:apqcId "13973" ;
+    p1z:apqcHierarchyId "5.4.8.13" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF13974 a p1z:Process ;
+    skos:prefLabel "Prepare and negotiate master agreements" ;
+    p1z:apqcId "13974" ;
+    p1z:apqcHierarchyId "5.4.8.14" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF13959 .
+
+apqc:PCF17451 a p1z:Process ;
+    skos:prefLabel "Manage transfer transactions" ;
+    p1z:apqcId "17451" ;
+    p1z:apqcHierarchyId "5.4.9" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF17452 a p1z:Process ;
+    skos:prefLabel "Authorize transactions" ;
+    p1z:apqcId "17452" ;
+    p1z:apqcHierarchyId "5.4.9.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17451 .
+
+apqc:PCF17453 a p1z:Process ;
+    skos:prefLabel "Perform in-payment" ;
+    p1z:apqcId "17453" ;
+    p1z:apqcHierarchyId "5.4.9.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17451 .
+
+apqc:PCF17454 a p1z:Process ;
+    skos:prefLabel "Perform out-payment" ;
+    p1z:apqcId "17454" ;
+    p1z:apqcHierarchyId "5.4.9.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17451 .
+
+apqc:PCF17455 a p1z:Process ;
+    skos:prefLabel "Settle transfer transactions" ;
+    p1z:apqcId "17455" ;
+    p1z:apqcHierarchyId "5.4.9.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17451 .
+
+apqc:PCF21713 a p1z:Process ;
+    skos:prefLabel "Manage and deliver investment portfolios" ;
+    p1z:apqcId "21713" ;
+    p1z:apqcHierarchyId "5.4.10" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF21714 a p1z:Process ;
+    skos:prefLabel "Plan trading and execution" ;
+    p1z:apqcId "21714" ;
+    p1z:apqcHierarchyId "5.4.10.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21713 .
+
+apqc:PCF21715 a p1z:Process ;
+    skos:prefLabel "Authorize trade orders" ;
+    p1z:apqcId "21715" ;
+    p1z:apqcHierarchyId "5.4.10.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21713 .
+
+apqc:PCF21716 a p1z:Process ;
+    skos:prefLabel "Generate trade orders" ;
+    p1z:apqcId "21716" ;
+    p1z:apqcHierarchyId "5.4.10.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21713 .
+
+apqc:PCF21717 a p1z:Process ;
+    skos:prefLabel "Perform trade execution" ;
+    p1z:apqcId "21717" ;
+    p1z:apqcHierarchyId "5.4.10.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21713 .
+
+apqc:PCF21718 a p1z:Process ;
+    skos:prefLabel "Conduct performance monitoring, evaluation and rebalancing" ;
+    p1z:apqcId "21718" ;
+    p1z:apqcHierarchyId "5.4.11" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF21719 a p1z:Process ;
+    skos:prefLabel "Calculate investment performance" ;
+    p1z:apqcId "21719" ;
+    p1z:apqcHierarchyId "5.4.11.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21718 .
+
+apqc:PCF21720 a p1z:Process ;
+    skos:prefLabel "Monitor and evaluate investment performance against investment policy statements and benchmarks" ;
+    p1z:apqcId "21720" ;
+    p1z:apqcHierarchyId "5.4.11.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21718 .
+
+apqc:PCF21721 a p1z:Process ;
+    skos:prefLabel "Monitor and evaluate asset allocation against investment strategy and model portfolios" ;
+    p1z:apqcId "21721" ;
+    p1z:apqcHierarchyId "5.4.11.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21718 .
+
+apqc:PCF21722 a p1z:Process ;
+    skos:prefLabel "Monitor and evaluate external investment managers" ;
+    p1z:apqcId "21722" ;
+    p1z:apqcHierarchyId "5.4.11.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21718 .
+
+apqc:PCF21723 a p1z:Process ;
+    skos:prefLabel "Perform portfolio rebalancing" ;
+    p1z:apqcId "21723" ;
+    p1z:apqcHierarchyId "5.4.11.5" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21718 .
+
+apqc:PCF21724 a p1z:Process ;
+    skos:prefLabel "Manage and monitor portfolio compliance" ;
+    p1z:apqcId "21724" ;
+    p1z:apqcHierarchyId "5.4.12" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF21725 a p1z:Process ;
+    skos:prefLabel "Establish investment compliance framework and policies" ;
+    p1z:apqcId "21725" ;
+    p1z:apqcHierarchyId "5.4.12.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21724 .
+
+apqc:PCF21726 a p1z:Process ;
+    skos:prefLabel "Perform pre/post trade portfolio compliance checks" ;
+    p1z:apqcId "21726" ;
+    p1z:apqcHierarchyId "5.4.12.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21724 .
+
+apqc:PCF21727 a p1z:Process ;
+    skos:prefLabel "Operate controls and monitor investment personnel activities for compliance with policies" ;
+    p1z:apqcId "21727" ;
+    p1z:apqcHierarchyId "5.4.12.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21724 .
+
+apqc:PCF21728 a p1z:Process ;
+    skos:prefLabel "Manage middle/back office investment operations" ;
+    p1z:apqcId "21728" ;
+    p1z:apqcHierarchyId "5.4.13" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF20058 .
+
+apqc:PCF21729 a p1z:Process ;
+    skos:prefLabel "Perform trade confirmation, settlement, and reconciliation" ;
+    p1z:apqcId "21729" ;
+    p1z:apqcHierarchyId "5.4.13.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21728 .
+
+apqc:PCF21730 a p1z:Process ;
+    skos:prefLabel "Manage and process corporate actions" ;
+    p1z:apqcId "21730" ;
+    p1z:apqcHierarchyId "5.4.13.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21728 .
+
+apqc:PCF21731 a p1z:Process ;
+    skos:prefLabel "Produce and manage investment pricing and valuation" ;
+    p1z:apqcId "21731" ;
+    p1z:apqcHierarchyId "5.4.13.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21728 .
+
+apqc:PCF21732 a p1z:Process ;
+    skos:prefLabel "Calculate and report management, custody, and administration fees" ;
+    p1z:apqcId "21732" ;
+    p1z:apqcHierarchyId "5.4.13.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21728 .
+
+apqc:PCF21733 a p1z:Process ;
+    skos:prefLabel "Execute proxy voting/active ownership decisions" ;
+    p1z:apqcId "21733" ;
+    p1z:apqcHierarchyId "5.4.13.5" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21728 .
+
+apqc:PCF21734 a p1z:Process ;
+    skos:prefLabel "Perform regulatory transaction reporting" ;
+    p1z:apqcId "21734" ;
+    p1z:apqcHierarchyId "5.4.13.6" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF21728 .
+
+apqc:PCF14058 a p1z:Process ;
+    skos:prefLabel "Perform contract accounting - corporate function" ;
+    p1z:apqcId "14058" ;
+    p1z:apqcHierarchyId "9.3.2.10" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10748 .
+
+apqc:PCF14059 a p1z:Process ;
+    skos:prefLabel "Perform bank accounting - corporate function" ;
+    p1z:apqcId "14059" ;
+    p1z:apqcHierarchyId "9.3.2.11" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10748 .
+
+apqc:PCF14060 a p1z:Process ;
+    skos:prefLabel "Account for financial instruments: sub-ledger" ;
+    p1z:apqcId "14060" ;
+    p1z:apqcHierarchyId "9.3.2.12" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10748 .
+
+apqc:PCF14061 a p1z:Process ;
+    skos:prefLabel "Perform closing of general ledger" ;
+    p1z:apqcId "14061" ;
+    p1z:apqcHierarchyId "9.3.3" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10730 .
+
+apqc:PCF14062 a p1z:Process ;
+    skos:prefLabel "Close sub-ledgers and post to general ledger" ;
+    p1z:apqcId "14062" ;
+    p1z:apqcHierarchyId "9.3.3.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14061 .
+
+apqc:PCF14063 a p1z:Process ;
+    skos:prefLabel "Process period end adjustments (e.g., accruals, currency conversions)" ;
+    p1z:apqcId "14063" ;
+    p1z:apqcHierarchyId "9.3.3.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14061 .
+
+apqc:PCF14077 a p1z:Process ;
+    skos:prefLabel "Develop credit policy" ;
+    p1z:apqcId "14077" ;
+    p1z:apqcHierarchyId "9.7.2.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10759 .
+
+apqc:PCF14078 a p1z:Process ;
+    skos:prefLabel "Analyze/Approve new account applications for customer credit" ;
+    p1z:apqcId "14078" ;
+    p1z:apqcHierarchyId "9.7.2.10" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10759 .
+
+apqc:PCF14081 a p1z:Process ;
+    skos:prefLabel "Review counterparty credit limit" ;
+    p1z:apqcId "14081" ;
+    p1z:apqcHierarchyId "9.7.5.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11208 .
+
+apqc:PCF14084 a p1z:Process ;
+    skos:prefLabel "Analyze capital adequacy history" ;
+    p1z:apqcId "14084" ;
+    p1z:apqcHierarchyId "9.7.5.8" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11208 .
+
+apqc:PCF14085 a p1z:Process ;
+    skos:prefLabel "Forecast capital adequacy policy" ;
+    p1z:apqcId "14085" ;
+    p1z:apqcHierarchyId "9.7.5.9" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11208 .
+
+apqc:PCF11281 a p1z:Process ;
+    skos:prefLabel "Develop security strategy" ;
+    p1z:apqcId "11281" ;
+    p1z:apqcHierarchyId "10.1.5" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10937 .
+
+apqc:PCF11282 a p1z:Process ;
+    skos:prefLabel "Perform security needs assessment" ;
+    p1z:apqcId "11282" ;
+    p1z:apqcHierarchyId "10.1.5.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11281 .
+
+apqc:PCF11287 a p1z:Process ;
+    skos:prefLabel "Determine security and risk tolerance levels" ;
+    p1z:apqcId "11287" ;
+    p1z:apqcHierarchyId "10.1.5.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11281 .
+
+apqc:PCF11288 a p1z:Process ;
+    skos:prefLabel "Perform threat assessment" ;
+    p1z:apqcId "11288" ;
+    p1z:apqcHierarchyId "10.1.5.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11281 .
+
+apqc:PCF11289 a p1z:Process ;
+    skos:prefLabel "Develop risk tolerance levels" ;
+    p1z:apqcId "11289" ;
+    p1z:apqcHierarchyId "10.1.5.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11281 .
+
+apqc:PCF11290 a p1z:Process ;
+    skos:prefLabel "Develop security program" ;
+    p1z:apqcId "11290" ;
+    p1z:apqcHierarchyId "10.1.6" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10937 .
+
+apqc:PCF11291 a p1z:Process ;
+    skos:prefLabel "Develop threat response strategy" ;
+    p1z:apqcId "11291" ;
+    p1z:apqcHierarchyId "10.1.7" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10937 .
+
+apqc:PCF11292 a p1z:Process ;
+    skos:prefLabel "Perform threat assessment" ;
+    p1z:apqcId "11292" ;
+    p1z:apqcHierarchyId "10.1.7.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11291 .
+
+apqc:PCF11293 a p1z:Process ;
+    skos:prefLabel "Develop threat response program" ;
+    p1z:apqcId "11293" ;
+    p1z:apqcHierarchyId "10.1.7.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11291 .
+
+apqc:PCF11294 a p1z:Process ;
+    skos:prefLabel "Manage security programs" ;
+    p1z:apqcId "11294" ;
+    p1z:apqcHierarchyId "10.1.8" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF10937 .
+
+apqc:PCF11295 a p1z:Process ;
+    skos:prefLabel "Manage and support security program" ;
+    p1z:apqcId "11295" ;
+    p1z:apqcHierarchyId "10.1.8.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11294 .
+
+apqc:PCF11296 a p1z:Process ;
+    skos:prefLabel "Manage and support threat response program" ;
+    p1z:apqcId "11296" ;
+    p1z:apqcHierarchyId "10.1.8.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF11294 .
+
+apqc:PCF14161 a p1z:Process ;
+    skos:prefLabel "Manage operational risk" ;
+    p1z:apqcId "14161" ;
+    p1z:apqcHierarchyId "11.1.4" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17060 .
+
+apqc:PCF14162 a p1z:Process ;
+    skos:prefLabel "Analyze operational risk history" ;
+    p1z:apqcId "14162" ;
+    p1z:apqcHierarchyId "11.1.4.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14161 .
+
+apqc:PCF14163 a p1z:Process ;
+    skos:prefLabel "Forecast operational risk requirement" ;
+    p1z:apqcId "14163" ;
+    p1z:apqcHierarchyId "11.1.4.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14161 .
+
+apqc:PCF14164 a p1z:Process ;
+    skos:prefLabel "Provide operational risk capital allocation" ;
+    p1z:apqcId "14164" ;
+    p1z:apqcHierarchyId "11.1.4.3" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14161 .
+
+apqc:PCF14169 a p1z:Process ;
+    skos:prefLabel "Calculate operational risks according to Basel II, EU CRD, and national legislation" ;
+    p1z:apqcId "14169" ;
+    p1z:apqcHierarchyId "11.1.4.4" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14161 .
+
+apqc:PCF14170 a p1z:Process ;
+    skos:prefLabel "Calculate operational risks according to internal models" ;
+    p1z:apqcId "14170" ;
+    p1z:apqcHierarchyId "11.1.4.5" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14161 .
+
+apqc:PCF14171 a p1z:Process ;
+    skos:prefLabel "Report disclosure (e.g. Basel II reports), COREP, and internal reporting" ;
+    p1z:apqcId "14171" ;
+    p1z:apqcHierarchyId "11.1.4.6" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14161 .
+
+apqc:PCF14172 a p1z:Process ;
+    skos:prefLabel "Perform operational loss and risk event data capture" ;
+    p1z:apqcId "14172" ;
+    p1z:apqcHierarchyId "11.1.4.7" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14161 .
+
+apqc:PCF14166 a p1z:Process ;
+    skos:prefLabel "Manage anti-money laundering procedures" ;
+    p1z:apqcId "14166" ;
+    p1z:apqcHierarchyId "11.1.4.8" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14161 .
+
+apqc:PCF14155 a p1z:Process ;
+    skos:prefLabel "Manage market risk" ;
+    p1z:apqcId "14155" ;
+    p1z:apqcHierarchyId "11.1.5" ;
+    p1z:apqcLevel 3 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17060 .
+
+apqc:PCF17465 a p1z:Process ;
+    skos:prefLabel "Gather market risk analytics" ;
+    p1z:apqcId "17465" ;
+    p1z:apqcHierarchyId "11.1.5.1" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF14155 .
+
+apqc:PCF17466 a p1z:Process ;
+    skos:prefLabel "Manage insurance risk" ;
+    p1z:apqcId "17466" ;
+    p1z:apqcHierarchyId "11.1.5.2" ;
+    p1z:apqcLevel 4 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Managing re-insurance through setting up proportional, non-proportional XL, non-proportional CAT XL and facultative treaty masters." ;
+    p1z:parentProcess apqc:PCF14155 .
+
+# Genuine industry rename on a shared element, added as alternative label only
+apqc:PCF21627 skos:altLabel "Execute last mile product delivery" .
+
+# Industry-new metrics (109) and cross-maps
+
+apqc:MET105231 a p1z:Metric ;
+    skos:prefLabel "Personnel cost to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105231" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to internal personnel cost" ;
+    p1z:units "percent" .
+
+apqc:MET105234 a p1z:Metric ;
+    skos:prefLabel "Overhead cost to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105234" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to internal overhead cost" ;
+    p1z:units "percent" .
+
+apqc:MET105229 a p1z:Metric ;
+    skos:prefLabel "Equipment cost to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105229" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to equipment cost" ;
+    p1z:units "percent" .
+
+apqc:MET105237 a p1z:Metric ;
+    skos:prefLabel "Variable cost to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105237" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to variable cost" ;
+    p1z:units "percent" .
+
+apqc:MET105230 a p1z:Metric ;
+    skos:prefLabel "Material cost to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105230" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to material cost" ;
+    p1z:units "percent" .
+
+apqc:MET105236 a p1z:Metric ;
+    skos:prefLabel "Fixed cost to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105236" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to fixed cost" ;
+    p1z:units "percent" .
+
+apqc:MET105233 a p1z:Metric ;
+    skos:prefLabel "Outsourced cost to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105233" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to outsourced cost" ;
+    p1z:units "percent" .
+
+apqc:MET105232 a p1z:Metric ;
+    skos:prefLabel "Systems cost to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105232" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to internal systems cost" ;
+    p1z:units "percent" .
+
+apqc:MET105235 a p1z:Metric ;
+    skos:prefLabel "Other costs to perform the function \"develop and manage products and services\" as a percentage of total cost" ;
+    p1z:apqcMetricId "105235" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the function \"develop and manage products and services\" allocated to costs other than equipment, material, internal personnel, internal systems, internal overhead, or outsourced costs" ;
+    p1z:units "percent" .
+
+apqc:MET112594 a p1z:Metric ;
+    skos:prefLabel "Number of supply chain function FTEs per $1 billion revenue" ;
+    p1z:apqcMetricId "112594" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:StaffProductivity ;
+    p1z:formula "Total number of FTEs that perform the supply chain function / (Total business entity revenue * .000000001)" ;
+    p1z:units "FTEs" .
+
+apqc:MET112592 a p1z:Metric ;
+    skos:prefLabel "Number of active suppliers in vendor master file per $1 million revenue" ;
+    p1z:apqcMetricId "112592" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:ProcessEfficiency ;
+    p1z:formula "Number of active unique suppliers in vendor master file / (Total business entity revenue * .000001)" ;
+    p1z:units "active vendors" .
+
+apqc:MET112359 a p1z:Metric ;
+    skos:prefLabel "Number of purchase order line items per FTE that performs the process group \"procure materials and services\"" ;
+    p1z:apqcMetricId "112359" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:StaffProductivity ;
+    p1z:formula "Number of purchase order line items processed / Number of FTEs who perform the process group \"procure materials and services\"" ;
+    p1z:units "purchase order line items" .
+
+apqc:MET112358 a p1z:Metric ;
+    skos:prefLabel "Personnel cost to perform the process \"select suppliers and develop/maintain contracts\" per process FTE" ;
+    p1z:apqcMetricId "112358" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Personnel cost to perform the process \"select suppliers and develop/maintain contracts\" / Number of FTEs who perform the process \"select suppliers and develop/maintain contracts\"" ;
+    p1z:units "dollars" .
+
+apqc:MET112838 a p1z:Metric ;
+    skos:prefLabel "12-month difference in warranty costs (repair and replacement) as a percentage of sales" ;
+    p1z:apqcMetricId "112838" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Warranty costs as a percentage of sales - Warranty costs as a percentage of sales measured 12 months ago" ;
+    p1z:units "percent" .
+
+apqc:MET112839 a p1z:Metric ;
+    skos:prefLabel "12-month difference in finished-product first-pass quality yield for primary products" ;
+    p1z:apqcMetricId "112839" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Finished product first-pass quality yield for primary products - Finished product first-pass quality yield for primary products measured 12 months ago" ;
+    p1z:units "percent" .
+
+apqc:MET105122 a p1z:Metric ;
+    skos:prefLabel "Number of new retail deposit account applications initiated through contact centers as a percentage of total new applications initiated" ;
+    p1z:apqcMetricId "105122" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:ProcessEfficiency ;
+    p1z:formula "(Number of new retail deposit account applications initiated through contact centers / Total number of new retail deposit account applications initiated) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105412 a p1z:Metric ;
+    skos:prefLabel "Annual rate of growth in number of deposit accounts (all types)" ;
+    p1z:apqcMetricId "105412" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of retail deposit accounts opened in the last 12 months - Number of retail deposit accounts discontinued in the last 12 months) / Total number of retail deposit accounts held" ;
+    p1z:units "percent" .
+
+apqc:MET105088 a p1z:Metric ;
+    skos:prefLabel "Cycle time (in business days) to process a new retail deposit account application" ;
+    p1z:apqcMetricId "105088" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CycleTime ;
+    p1z:formula "Cycle time (in business days) to process a new retail deposit account applications" ;
+    p1z:units "days" .
+
+apqc:MET105411 a p1z:Metric ;
+    skos:prefLabel "Retail deposit accounts opened as a percentage of applications initiated (all types and channels)" ;
+    p1z:apqcMetricId "105411" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of retail deposit accounts opened in the last 12 months / Total number of new retail deposit account applications initiated) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105095 a p1z:Metric ;
+    skos:prefLabel "Percentage of FTEs who perform the process \"open accounts\" allocated to branch banking activities" ;
+    p1z:apqcMetricId "105095" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of FTEs who perform the process \"open accounts\" allocated to Branch Banking staff" ;
+    p1z:units "percent" .
+
+apqc:MET105407 a p1z:Metric ;
+    skos:prefLabel "Number of FTEs who perform the process \"open accounts\" per $1 billion retail bank revenue (interest income plus fee income)" ;
+    p1z:apqcMetricId "105407" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:StaffProductivity ;
+    p1z:formula "Number of FTEs who perform the process \"open accounts\" / (Total annual revenue for retail banking operation * .000000001)" ;
+    p1z:units "FTEs" .
+
+apqc:MET105121 a p1z:Metric ;
+    skos:prefLabel "Number of new retail deposit account applications initiated through teller services at branches as a percentage of total new applications initiated" ;
+    p1z:apqcMetricId "105121" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:ProcessEfficiency ;
+    p1z:formula "(Number of new retail deposit account applications initiated through teller services at branches / Total number of new retail deposit account applications initiated) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105094 a p1z:Metric ;
+    skos:prefLabel "Ratio of retail banking FTEs who perform the process \"open accounts\" to total retail banking employees" ;
+    p1z:apqcMetricId "105094" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of FTEs who perform the process \"open accounts\" / Number of business entity employees) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105423 a p1z:Metric ;
+    skos:prefLabel "Total annual cost of account opening activities per $1 billion retail bank revenue (interest income plus fee income)" ;
+    p1z:apqcMetricId "105423" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total cost of account opening activities / (Total annual revenue for retail banking operation *.000000001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105119 a p1z:Metric ;
+    skos:prefLabel "Number of new retail deposit account applications initiated through internet/online banking as a percentage of total new applications initiated" ;
+    p1z:apqcMetricId "105119" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:ProcessEfficiency ;
+    p1z:formula "(Number of new retail deposit account applications initiated through internet/online banking / Total number of new retail deposit account applications initiated) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105120 a p1z:Metric ;
+    skos:prefLabel "Number of new retail deposit account applications initiated through mobile banking as a percentage of total new applications initiated" ;
+    p1z:apqcMetricId "105120" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:ProcessEfficiency ;
+    p1z:formula "(Number of new retail deposit account applications initiated through mobile banking / Total number of new retail deposit account applications initiated) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105102 a p1z:Metric ;
+    skos:prefLabel "Deposit accounts opened as a percentage of deposit accounts currently held" ;
+    p1z:apqcMetricId "105102" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of retail deposit accounts opened in the last 12 months / Total number of retail deposit accounts held) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105096 a p1z:Metric ;
+    skos:prefLabel "Percentage of FTEs who perform the process \"open accounts\" allocated to non-branch banking activities" ;
+    p1z:apqcMetricId "105096" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of FTEs who perform the process \"open accounts\" allocated to Non-Branch Banking staff" ;
+    p1z:units "percent" .
+
+apqc:MET105106 a p1z:Metric ;
+    skos:prefLabel "Total cost to perform the banking process \"open accounts\" per process FTE" ;
+    p1z:apqcMetricId "105106" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total cost of account opening activities / Number of FTEs who perform the process \"open accounts\"" ;
+    p1z:units "dollars" .
+
+apqc:MET105107 a p1z:Metric ;
+    skos:prefLabel "Total cost of account opening activities per $1,000 revenue" ;
+    p1z:apqcMetricId "105107" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total cost of account opening activities / (Total annual revenue for retail banking operation *.001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105419 a p1z:Metric ;
+    skos:prefLabel "Total annual cost of account opening activities per new retail deposit account opened" ;
+    p1z:apqcMetricId "105419" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total cost of account opening activities / Number of retail deposit accounts opened in the last 12 months" ;
+    p1z:units "dollars" .
+
+apqc:MET105130 a p1z:Metric ;
+    skos:prefLabel "Percentage of unique retail banking customers with bank relationship 1-3 years" ;
+    p1z:apqcMetricId "105130" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of unique retail banking customers with a bank relationship of 1-3 years" ;
+    p1z:units "percent" .
+
+apqc:MET105086 a p1z:Metric ;
+    skos:prefLabel "Percentage of all retail transactions completed through self-service channels" ;
+    p1z:apqcMetricId "105086" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:ProcessEfficiency ;
+    p1z:formula "Percentage of all retail transactions completed via self-service channels" ;
+    p1z:units "percent" .
+
+apqc:MET105132 a p1z:Metric ;
+    skos:prefLabel "Percentage of unique retail banking customers with bank relationship more than 5 years" ;
+    p1z:apqcMetricId "105132" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of unique retail banking customers with a bank relationship of more than 5 years" ;
+    p1z:units "percent" .
+
+apqc:MET105131 a p1z:Metric ;
+    skos:prefLabel "Percentage of unique retail banking customers with bank relationship 3-5 years" ;
+    p1z:apqcMetricId "105131" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of unique retail banking customers with a bank relationship of 3-5 years" ;
+    p1z:units "percent" .
+
+apqc:MET105105 a p1z:Metric ;
+    skos:prefLabel "Total number of deposit accounts serviced each month per retail banking employee" ;
+    p1z:apqcMetricId "105105" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:StaffProductivity ;
+    p1z:formula "Number of deposit accounts serviced per month / Number of business entity employees" ;
+    p1z:units "deposit accounts" .
+
+apqc:MET105087 a p1z:Metric ;
+    skos:prefLabel "Percentage of branch network with onsite technologies to capture customer documents in electronic format at the first point of touch" ;
+    p1z:apqcMetricId "105087" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:ProcessEfficiency ;
+    p1z:formula "Percentage of branch network equipped with onsite technologies to capture customer documents in electronic format at the first point of touch during the account opening process" ;
+    p1z:units "percent" .
+
+apqc:MET105129 a p1z:Metric ;
+    skos:prefLabel "Percentage of unique retail banking customers with bank relationship less than 1 year" ;
+    p1z:apqcMetricId "105129" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of unique retail banking customers with a bank relationship of less than 1 year" ;
+    p1z:units "percent" .
+
+apqc:MET105101 a p1z:Metric ;
+    skos:prefLabel "Deposit accounts discontinued as a percentage of deposit accounts currently held" ;
+    p1z:apqcMetricId "105101" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of retail deposit accounts discontinued in the last 12 months / Total number of retail deposit accounts held) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105426 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers via Teller Services at Branches (including staffed kiosks) channel per retail banking customer" ;
+    p1z:apqcMetricId "105426" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to teller services at branches * Total annual cost to serve retail banking customers * 0.01) / Number of unique retail banking customers" ;
+    p1z:units "dollars" .
+
+apqc:MET105098 a p1z:Metric ;
+    skos:prefLabel "Percentage of FTEs who perform the process \"service bank customers\" allocated to branch banking activities" ;
+    p1z:apqcMetricId "105098" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of FTEs who perform the process \"service banking customers\" allocated to Branch Banking staff" ;
+    p1z:units "percent" .
+
+apqc:MET105108 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers through online banking per $1,000 revenue" ;
+    p1z:apqcMetricId "105108" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to online/internet banking * Total annual cost to serve retail banking customers * 0.01) / (Total annual revenue for retail banking operation * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105112 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers through automated teller machines (ATM) per $1,000 revenue" ;
+    p1z:apqcMetricId "105112" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to ATMs * Total annual cost to serve retail banking customers * 0.01) / (Total annual revenue for retail banking operation * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105097 a p1z:Metric ;
+    skos:prefLabel "Ratio of retail banking FTEs who perform the process \"service bank customers\" to total retail banking employees" ;
+    p1z:apqcMetricId "105097" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of FTEs who perform the process \"service bank customers\" / Number of business entity employees) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105425 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers via Mobile Banking channel (including web-based and mobile applications) per retail banking customer" ;
+    p1z:apqcMetricId "105425" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to mobile banking * Total annual cost to serve retail banking customers * 0.01) / Number of unique retail banking customers" ;
+    p1z:units "dollars" .
+
+apqc:MET105099 a p1z:Metric ;
+    skos:prefLabel "Percentage of FTEs who perform the process \"service bank customers\" allocated to non-branch banking activities" ;
+    p1z:apqcMetricId "105099" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of FTEs who perform the process \"service banking customers\" allocated to Non-Branch Banking staff" ;
+    p1z:units "percent" .
+
+apqc:MET105103 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers per $1,000 revenue" ;
+    p1z:apqcMetricId "105103" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total annual cost to serve retail banking customers / (Total annual revenue for retail banking operation * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105424 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers via Internet/Online Banking channel per retail banking customer" ;
+    p1z:apqcMetricId "105424" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to online/internet banking * Total annual cost to serve retail banking customers * .01) / Number of unique retail banking customers" ;
+    p1z:units "dollars" .
+
+apqc:MET105111 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers through contact centers per $1,000 revenue" ;
+    p1z:apqcMetricId "105111" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to contact centers * Total annual cost to serve retail banking customers * 0.01) / (Total annual revenue for retail banking operation * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105427 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers via Contact Centers channel per retail banking customer" ;
+    p1z:apqcMetricId "105427" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to contact centers * Total annual cost to serve retail banking customers * 0.01) / Number of unique retail banking customers" ;
+    p1z:units "dollars" .
+
+apqc:MET105109 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers through mobile banking per $1,000 revenue" ;
+    p1z:apqcMetricId "105109" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to mobile banking * Total annual cost to serve retail banking customers * 0.01) / (Total annual revenue for retail banking operation * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105406 a p1z:Metric ;
+    skos:prefLabel "Number of FTEs who perform the process \"service bank customers\" per $1 billion retail bank revenue (interest income plus fee income)" ;
+    p1z:apqcMetricId "105406" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:StaffProductivity ;
+    p1z:formula "Number of FTEs who perform the process \"service bank customers\" / (Total annual revenue for retail banking operation * .000000001)" ;
+    p1z:units "FTEs" .
+
+apqc:MET105409 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers (all channels) per retail banking customer" ;
+    p1z:apqcMetricId "105409" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:StaffProductivity ;
+    p1z:formula "Total annual cost to serve retail banking customers / Number of unique retail banking customers" ;
+    p1z:units "dollars" .
+
+apqc:MET105428 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers via Automated Teller Machines (ATM) channel per retail banking customer" ;
+    p1z:apqcMetricId "105428" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to ATMs * Total annual cost to serve retail banking customers * 0.01) / Number of unique retail banking customers" ;
+    p1z:units "dollars" .
+
+apqc:MET105110 a p1z:Metric ;
+    skos:prefLabel "Total cost to serve banking customers through teller services at branches per $1,000 revenue" ;
+    p1z:apqcMetricId "105110" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of total cost to serve banking customers allocated to teller services at branches * Total annual cost to serve retail banking customers * 0.01) / (Total annual revenue for retail banking operation * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET112883 a p1z:Metric ;
+    skos:prefLabel "Number of HR automated bots (not chatbots) in use today per 1,000 business entity FTEs" ;
+    p1z:apqcMetricId "112883" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Number of automated bots (not chatbots) ran in HR organization today / (Number of business entity FTEs * .001)" ;
+    p1z:units "bots" .
+
+apqc:MET112881 a p1z:Metric ;
+    skos:prefLabel "Number of HR chatbots today per 1,000 business entity FTEs" ;
+    p1z:apqcMetricId "112881" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Number of chatbots (distinct from bots) ran in HR organization today / (Number of business entity FTEs * .001)" ;
+    p1z:units "chatbots" .
+
+apqc:MET112882 a p1z:Metric ;
+    skos:prefLabel "Total digital worker equivalents (DWEs) in HR function per 1,000 business entity FTEs" ;
+    p1z:apqcMetricId "112882" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Number of digital worker equivalents (DWEs) in HR function / (Number of business entity FTEs * .001)" ;
+    p1z:units "DWEs" .
+
+apqc:MET112845 a p1z:Metric ;
+    skos:prefLabel "Systems cost to perform the HR function per function FTE" ;
+    p1z:apqcMetricId "112845" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Systems cost to perform the function \"develop and manage human capital\" / Number of FTEs who perform the function \"develop and manage human capital\"" ;
+    p1z:units "dollars" .
+
+apqc:MET112884 a p1z:Metric ;
+    skos:prefLabel "Number of HR automated bots + chatbots in use today per 1,000 business entity FTEs" ;
+    p1z:apqcMetricId "112884" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of automated bots (not chatbots) ran in HR organization today + Number of chatbots (distinct from bots) ran in HR organization today) / (Number of business entity FTEs * .001)" ;
+    p1z:units "bots" .
+
+apqc:MET112959 a p1z:Metric ;
+    skos:prefLabel "Total budget for the HR function per HR function FTE" ;
+    p1z:apqcMetricId "112959" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Budget to perform the function \"develop and manage human capital\" / Number of FTEs who perform the function \"develop and manage human capital\"" ;
+    p1z:units "dollars" .
+
+apqc:MET112231 a p1z:Metric ;
+    skos:prefLabel "Number of change function FTEs as a percentage of business entity FTEs" ;
+    p1z:apqcMetricId "112231" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of FTEs in organizational change function / Number of business entity FTEs) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET112229 a p1z:Metric ;
+    skos:prefLabel "Total cost to perform the HR function per change function FTE" ;
+    p1z:apqcMetricId "112229" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Total cost to perform the function \"develop and manage human capital\" / Number of FTEs in organizational change function" ;
+    p1z:units "dollars" .
+
+apqc:MET112230 a p1z:Metric ;
+    skos:prefLabel "Number of change function FTEs per $1 billion revenue" ;
+    p1z:apqcMetricId "112230" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Number of FTEs in organizational change function / (Total business entity revenue * .000000001)" ;
+    p1z:units "dollars" .
+
+apqc:MET112228 a p1z:Metric ;
+    skos:prefLabel "Business entity employees per change function FTE" ;
+    p1z:apqcMetricId "112228" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Number of business entity employees / Number of FTEs in organizational change function" ;
+    p1z:units "employees" .
+
+apqc:MET112227 a p1z:Metric ;
+    skos:prefLabel "Business entity revenue per change function FTE" ;
+    p1z:apqcMetricId "112227" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Total business entity revenue / Number of FTEs in organizational change function" ;
+    p1z:units "dollars" .
+
+apqc:MET112951 a p1z:Metric ;
+    skos:prefLabel "Percentage of FTEs that perform the process group \"manage employee on-boarding, development, and training\" that perform the processes \"manage employee development\" and \"develop and train employees\"" ;
+    p1z:apqcMetricId "112951" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "((Number of FTEs that perform the process \"manage employee development\" + Number of FTEs that perform the process \"develop and train employees\") / Number of FTEs that perform the process group \"manage employee on-boarding, development, and training\") * 100" ;
+    p1z:units "percent" .
+
+apqc:MET101000 a p1z:Metric ;
+    skos:prefLabel "Number of FTEs that perform the processes \"manage employee development\" and \"develop and train employees\" per $1 billion revenue" ;
+    p1z:apqcMetricId "101000" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:ProcessEfficiency ;
+    p1z:formula "Number of FTEs who perform the processes \"manage employee development\" and \"develop and train employees\" / (Total business entity revenue * .000000001)" ;
+    p1z:units "FTEs" .
+
+apqc:MET112945 a p1z:Metric ;
+    skos:prefLabel "Total cost to perform the process group \"manage employee on-boarding, development, and training\" per new hire" ;
+    p1z:apqcMetricId "112945" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total cost to perform the process group \"manage employee on-boarding, development, and training\" / Total number of new hires" ;
+    p1z:units "dollars" .
+
+apqc:MET112954 a p1z:Metric ;
+    skos:prefLabel "Total cost to perform the processes \"manage employee development\" and \"develop and train employees\" per process FTE" ;
+    p1z:apqcMetricId "112954" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total cost to perform the processes \"manage employee development\" and \"develop and train employees\" / Number of FTEs who perform the processes \"manage employee development\" and \"develop and train employees\"" ;
+    p1z:units "dollars" .
+
+apqc:MET112952 a p1z:Metric ;
+    skos:prefLabel "Total cost to perform the processes \"manage employee development\" and \"develop and train employees\" as a percentage of total cost to perform the process group \"manage employee on-boarding, development, and training\"" ;
+    p1z:apqcMetricId "112952" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "((Total cost to perform the process \"manage employee development\" + Total cost to perform the process \"develop and train employees\" ) / Total cost to perform the process group \"manage employee on-boarding, development, and training\") * 100" ;
+    p1z:units "percent" .
+
+apqc:MET103628 a p1z:Metric ;
+    skos:prefLabel "Total cost to perform the processes \"manage employee development\" and \"develop and train employees\" per business entity employee" ;
+    p1z:apqcMetricId "103628" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total cost to perform the processes \"manage employee development\" and \"develop and train employees\" / Number of business entity employees" ;
+    p1z:units "dollars" .
+
+apqc:MET112847 a p1z:Metric ;
+    skos:prefLabel "Overhead and other cost to perform the process group \"manage employee on-boarding, development, and training\" per process group FTE" ;
+    p1z:apqcMetricId "112847" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Overhead and other cost to perform the process group \"manage employee on-boarding, development, and training\" / Number of FTEs that perform the process group \"manage employee on-boarding, development, and training\"" ;
+    p1z:units "dollars" .
+
+apqc:MET112953 a p1z:Metric ;
+    skos:prefLabel "Total cost to perform the processes \"manage employee development\" and \"develop and train employees\" per business entity FTE" ;
+    p1z:apqcMetricId "112953" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Total cost to perform the process \"manage employee development\" + Total cost to perform the process \"develop and train employees\" ) / Number of business entity FTEs" ;
+    p1z:units "dollars" .
+
+apqc:MET112946 a p1z:Metric ;
+    skos:prefLabel "Number of new hires per FTE that perform the process group \"manage employee on-boarding, development, and training\"" ;
+    p1z:apqcMetricId "112946" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:StaffProductivity ;
+    p1z:formula "Total number of new hires / Number of FTEs that perform the process group \"manage employee on-boarding, development, and training\"" ;
+    p1z:units "hires" .
+
+apqc:MET103624 a p1z:Metric ;
+    skos:prefLabel "Total cost to perform the processes \"manage employee development\" and \"develop and train employees\" per $1,000 revenue" ;
+    p1z:apqcMetricId "103624" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Total cost to perform the processes \"manage employee development\" and \"develop and train employees\" / (Total business entity revenue * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET112948 a p1z:Metric ;
+    skos:prefLabel "Percentage of FTEs that perform the process group \"manage employee on-boarding, development, and training\" that perform the process \"manage employee development\"" ;
+    p1z:apqcMetricId "112948" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of FTEs that perform the process \"manage employee development\" / Number of FTEs that perform the process group \"manage employee on-boarding, development, and training\") * 100" ;
+    p1z:units "percent" .
+
+apqc:MET112957 a p1z:Metric ;
+    skos:prefLabel "Percentage of FTEs that perform the HR function that perform the process group \"manage employee on-boarding, development, and training\"" ;
+    p1z:apqcMetricId "112957" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of FTEs that perform the process group \"manage employee on-boarding, development, and training\" / Number of FTEs who perform the function \"develop and manage human capital\") * 100" ;
+    p1z:units "percent" .
+
+apqc:MET112846 a p1z:Metric ;
+    skos:prefLabel "Systems cost to perform the process group \"manage employee on-boarding, development, and training\" per process group FTE" ;
+    p1z:apqcMetricId "112846" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Systems cost to perform process group \"manage employee on-boarding, development, and training\" / Number of FTEs that perform the process group \"manage employee on-boarding, development, and training\"" ;
+    p1z:units "dollars" .
+
+apqc:MET112950 a p1z:Metric ;
+    skos:prefLabel "Percentage of FTEs that perform the process group \"manage employee on-boarding, development, and training\" that perform the process \"develop and train employees\"" ;
+    p1z:apqcMetricId "112950" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Number of FTEs that perform the process \"develop and train employees\" / Number of FTEs that perform the process group \"manage employee on-boarding, development, and training\") * 100" ;
+    p1z:units "percent" .
+
+apqc:MET112958 a p1z:Metric ;
+    skos:prefLabel "Internal cost to perform learning administration activities per FTE in learning administration" ;
+    p1z:apqcMetricId "112958" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "Internal cost for learning administration (excluding activities for processing and distributing payments) / Number of FTEs who perform learning administrative activities (exclude activities for processing and distributing payments)" ;
+    p1z:units "dollars" .
+
+apqc:MET107951 a p1z:Metric ;
+    skos:prefLabel "Estimate if not using AI - Total IT cost, excluding depreciation/amortization, as a percentage of revenue" ;
+    p1z:apqcMetricId "107951" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Estimate if not using AI - Total annual IT cost, excluding depreciation/amortization (i.e., based on cash flow) as a percentage of revenue" ;
+    p1z:units "percent" .
+
+apqc:MET105538 a p1z:Metric ;
+    skos:prefLabel "Systems cost to perform the finance function as a percentage of internal finance function cost" ;
+    p1z:apqcMetricId "105538" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Systems cost to perform the function \"manage financial resources\" / (Personnel cost to perform the function \"manage financial resources\" + Systems cost to perform the function \"manage financial resources\" + Overhead cost to perform the function \"manage financial resources\" + Costs other than personnel, systems, overhead, and outsourced to perform the function \"manage financial resources\")) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105540 a p1z:Metric ;
+    skos:prefLabel "Other cost to perform the finance function as a percentage of internal finance function cost" ;
+    p1z:apqcMetricId "105540" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Costs other than personnel, systems, overhead, and outsourced to perform the function \"manage financial resources\" / (Personnel cost to perform the function \"manage financial resources\" + Systems cost to perform the function \"manage financial resources\" + Overhead cost to perform the function \"manage financial resources\" + Costs other than personnel, systems, overhead, and outsourced to perform the function \"manage financial resources\")) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET105539 a p1z:Metric ;
+    skos:prefLabel "Overhead cost to perform the finance function as a percentage of internal finance function cost" ;
+    p1z:apqcMetricId "105539" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Overhead cost to perform the function \"manage financial resources\" / (Personnel cost to perform the function \"manage financial resources\" + Systems cost to perform the function \"manage financial resources\" + Overhead cost to perform the function \"manage financial resources\" + Costs other than personnel, systems, overhead, and outsourced to perform the function \"manage financial resources\")) * 100" ;
+    p1z:units "percent" .
+
+apqc:MET112885 a p1z:Metric ;
+    skos:prefLabel "Total DWEs in process group \"perform planning and management accounting\" per 1,000 business entity FTEs" ;
+    p1z:apqcMetricId "112885" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Total number of DWEs in process group \"perform planning and management accounting\" / (Number of business entity FTEs * .001)" ;
+    p1z:units "DWEs" .
+
+apqc:MET106083 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the process group \"perform revenue accounting\" per $100,000 revenue" ;
+    p1z:apqcMetricId "106083" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Overhead cost to perform the process \"process customer credit\" + Overhead cost to perform the process \"invoice customer\" + Overhead cost to perform the process \"process accounts receivable (AR)\" + Overhead cost to perform the process \"manage and process collections\" + Overhead cost to perform the process \"manage and process adjustments/deductions\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"process customer credit\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"invoice customer\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"process accounts receivable (AR)\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process collections\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process adjustments/deductions\") / (Total business entity revenue * 0.00001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105949 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the processes \"process accounts receivable (AR)\", \"manage and process collections\", and \"manage and process adjustments/deductions\" per $100,000 revenue" ;
+    p1z:apqcMetricId "105949" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Overhead cost to perform the process \"process accounts receivable (AR)\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"process accounts receivable (AR)\" +  Overhead cost to perform the process \"manage and process collections\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process collections\" + Overhead cost to perform the process \"manage and process adjustments/deductions\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process adjustments/deductions\") / (Total business entity revenue * .00001)" ;
+    p1z:units "dollars" .
+
+apqc:MET112596 a p1z:Metric ;
+    skos:prefLabel "Number of active customers managed per FTE that performs the order to invoice processes" ;
+    p1z:apqcMetricId "112596" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:StaffProductivity ;
+    p1z:formula "Number of active customers in customer master file / (Number of FTEs who perform the process \"manage sales orders\" + Number of FTEs who perform the process \"process customer credit\" + Number of FTEs who perform the process \"invoice customer\")" ;
+    p1z:units "active customers" .
+
+apqc:MET105941 a p1z:Metric ;
+    skos:prefLabel "Other cost to perform the processes \"process accounts receivable (AR)\", \"manage and process collections\", and \"manage and process adjustments/deductions\" per $100,000 revenue" ;
+    p1z:apqcMetricId "105941" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Costs other than personnel, systems, overhead, and outsourced to perform the process \"process accounts receivable (AR)\" +  Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process collections\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process adjustments/deductions\") / (Total business entity revenue * .00001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105961 a p1z:Metric ;
+    skos:prefLabel "Overhead cost to perform the processes \"process accounts receivable (AR)\", \"manage and process collections\", and \"manage and process adjustments/deductions\" per $100,000 revenue" ;
+    p1z:apqcMetricId "105961" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Overhead cost to perform the process \"process accounts receivable (AR)\" +  Overhead cost to perform the process \"manage and process collections\" + Overhead cost to perform the process \"manage and process adjustments/deductions\") / (Total business entity revenue * .00001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105945 a p1z:Metric ;
+    skos:prefLabel "Outsourced cost to perform the processes \"process accounts receivable (AR)\", \"manage and process collections\", and \"manage and process adjustments/deductions\" per $1,000 revenue" ;
+    p1z:apqcMetricId "105945" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Outsourced cost to perform the process \"process accounts receivable (AR)\" +  Outsourced cost to perform the process \"manage and process collections\" + Outsourced cost to perform the process \"manage and process adjustments/deductions\") / (Total business entity revenue * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105561 a p1z:Metric ;
+    skos:prefLabel "Outsourced cost to perform the process \"process accounts receivable (AR)\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105561" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the process \"process accounts receivable (AR)\" allocated to external costs" ;
+    p1z:units "percent" .
+
+apqc:MET105567 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the process \"process accounts receivable (AR)\" per $100,000 revenue" ;
+    p1z:apqcMetricId "105567" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Percentage of internal costs of the process \"process accounts receivable (AR)\" allocated to overhead and other costs * Percentage of total cost to perform the process \"process accounts receivable (AR)\" allocated to internal costs * 0.0001 * Total cost to perform the process \"process accounts receivable (AR)\") / (Total business entity revenue * .00001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105957 a p1z:Metric ;
+    skos:prefLabel "Overhead cost to perform the process \"process accounts receivable (AR)\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105957" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Overhead cost to perform the process \"process accounts receivable (AR)\" / Total cost to perform the process \"process accounts receivable (AR)\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET105566 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the process \"process accounts receivable (AR)\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105566" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "((Overhead cost to perform the process \"process accounts receivable (AR)\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"process accounts receivable (AR)\") / Total cost to perform the process \"process accounts receivable (AR)\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET105937 a p1z:Metric ;
+    skos:prefLabel "Other cost to perform the process \"process accounts receivable (AR)\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105937" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Costs other than personnel, systems, overhead, and outsourced to perform the process \"process accounts receivable (AR)\" / Total cost to perform the process \"process accounts receivable (AR)\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET105564 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the process \"manage and process collections\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105564" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "((Overhead cost to perform the process \"manage and process collections\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process collections\") / Total cost to perform the process \"manage and process collections\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET105935 a p1z:Metric ;
+    skos:prefLabel "Other cost to perform the process \"manage and process collections\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105935" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process collections\" / Total cost to perform the process \"manage and process collections\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET105955 a p1z:Metric ;
+    skos:prefLabel "Overhead cost to perform the process \"manage and process collections\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105955" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Overhead cost to perform the process \"manage and process collections\" / Total cost to perform the process \"manage and process collections\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET105565 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the process \"manage and process collections\" per $1,000 revenue" ;
+    p1z:apqcMetricId "105565" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Total cost to perform the process \"manage and process collections\" * Percentage of total cost of the process \"manage and process collections\" allocated to internal costs * Percentage of internal costs of the process \"manage and process collections\" allocated to overhead and other costs * 0.0001) / (Total business entity revenue * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105562 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the process \"manage and process adjustments/deductions\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105562" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "((Overhead cost to perform the process \"manage and process adjustments/deductions\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process adjustments/deductions\") / Total cost to perform the process \"manage and process adjustments/deductions\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET105563 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the process \"manage and process adjustments/deductions\" per $1,000 revenue" ;
+    p1z:apqcMetricId "105563" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Total cost to perform the process \"manage and process adjustments/deductions\" * Percentage of total cost of the process \"manage and process adjustments/deductions\" allocated to internal costs * Percentage of internal costs of the process \"manage and process adjustments/deductions\" allocated to overhead and other costs * 0.0001) / (Total business entity revenue * .001)" ;
+    p1z:units "dollars" .
+
+apqc:MET105933 a p1z:Metric ;
+    skos:prefLabel "Other cost to perform the process \"manage and process adjustments/deductions\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105933" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage and process adjustments/deductions\" / Total cost to perform the process \"manage and process adjustments/deductions\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET105559 a p1z:Metric ;
+    skos:prefLabel "Outsourced cost to perform the process \"manage and process adjustments/deductions\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105559" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of total cost to perform the process \"manage and process adjustments/deductions\" allocated to external costs" ;
+    p1z:units "percent" .
+
+apqc:MET105953 a p1z:Metric ;
+    skos:prefLabel "Overhead cost to perform the process \"manage and process adjustments/deductions\" as a percentage of total process cost" ;
+    p1z:apqcMetricId "105953" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "(Overhead cost to perform the process \"manage and process adjustments/deductions\" / Total cost to perform the process \"manage and process adjustments/deductions\") * 100.0" ;
+    p1z:units "percent" .
+
+apqc:MET108831 a p1z:Metric ;
+    skos:prefLabel "Overhead and other costs to perform the process group \"perform general accounting and reporting\" (excluding fixed assets) per $100,000 revenue" ;
+    p1z:apqcMetricId "108831" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:CostEffectiveness ;
+    p1z:formula "(Overhead cost to perform the process \"manage policies and procedures\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"manage policies and procedures\" + Overhead cost to perform the process \"perform general accounting\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"perform general accounting\" + Overhead cost to perform the process \"perform financial reporting\" + Costs other than personnel, systems, overhead, and outsourced to perform the process \"perform financial reporting\") / (Total business entity revenue * .00001)" ;
+    p1z:units "dollars" .
+
+apqc:MET112226 a p1z:Metric ;
+    skos:prefLabel "Percentage of organizational change investment allocated to people focused activities" ;
+    p1z:apqcMetricId "112226" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of organizational change investment allocated to people focused activities" ;
+    p1z:units "percent" .
+
+apqc:MET112225 a p1z:Metric ;
+    skos:prefLabel "Percentage of annual revenue invested in organizational change" ;
+    p1z:apqcMetricId "112225" ;
+    p1z:metricClass p1zv:OperationalDriver ;
+    p1z:apqcMetricCategory p1zv:SupplementalInformation ;
+    p1z:formula "Percentage of annual revenue invested in organizational change" ;
+    p1z:units "percent" .
+
+apqc:PCF10003 p1z:hasAssociatedMetric
+        apqc:MET105231 ,
+        apqc:MET105234 ,
+        apqc:MET105229 ,
+        apqc:MET105237 ,
+        apqc:MET105230 ,
+        apqc:MET105236 ,
+        apqc:MET105233 ,
+        apqc:MET105232 ,
+        apqc:MET105235 .
+
+apqc:PCF10007 p1z:hasAssociatedMetric
+        apqc:MET112883 ,
+        apqc:MET112881 ,
+        apqc:MET112882 ,
+        apqc:MET112845 ,
+        apqc:MET112884 ,
+        apqc:MET112959 .
+
+apqc:PCF10216 p1z:hasAssociatedMetric
+        apqc:MET112592 ,
+        apqc:MET112359 .
+
+apqc:PCF10217 p1z:hasAssociatedMetric
+        apqc:MET112838 .
+
+apqc:PCF10278 p1z:hasAssociatedMetric
+        apqc:MET112358 .
+
+apqc:PCF10304 p1z:hasAssociatedMetric
+        apqc:MET112839 .
+
+apqc:PCF10473 p1z:hasAssociatedMetric
+        apqc:MET112958 .
+
+apqc:PCF10728 p1z:hasAssociatedMetric
+        apqc:MET112885 .
+
+apqc:PCF10729 p1z:hasAssociatedMetric
+        apqc:MET106083 ,
+        apqc:MET105949 ,
+        apqc:MET112596 ,
+        apqc:MET105941 ,
+        apqc:MET105961 ,
+        apqc:MET105945 .
+
+apqc:PCF10730 p1z:hasAssociatedMetric
+        apqc:MET108831 .
+
+apqc:PCF10744 p1z:hasAssociatedMetric
+        apqc:MET105561 ,
+        apqc:MET105567 ,
+        apqc:MET105957 ,
+        apqc:MET105566 ,
+        apqc:MET105937 .
+
+apqc:PCF10745 p1z:hasAssociatedMetric
+        apqc:MET105564 ,
+        apqc:MET105935 ,
+        apqc:MET105955 ,
+        apqc:MET105565 .
+
+apqc:PCF10746 p1z:hasAssociatedMetric
+        apqc:MET105562 ,
+        apqc:MET105563 ,
+        apqc:MET105933 ,
+        apqc:MET105559 ,
+        apqc:MET105953 .
+
+apqc:PCF11074 p1z:hasAssociatedMetric
+        apqc:MET112226 ,
+        apqc:MET112225 .
+
+apqc:PCF13959 p1z:hasAssociatedMetric
+        apqc:MET105426 ,
+        apqc:MET105098 ,
+        apqc:MET105108 ,
+        apqc:MET105112 ,
+        apqc:MET105097 ,
+        apqc:MET105425 ,
+        apqc:MET105099 ,
+        apqc:MET105103 ,
+        apqc:MET105424 ,
+        apqc:MET105111 ,
+        apqc:MET105427 ,
+        apqc:MET105109 ,
+        apqc:MET105406 ,
+        apqc:MET105409 ,
+        apqc:MET105428 ,
+        apqc:MET105110 .
+
+apqc:PCF17043 p1z:hasAssociatedMetric
+        apqc:MET112231 ,
+        apqc:MET112229 ,
+        apqc:MET112230 ,
+        apqc:MET112228 ,
+        apqc:MET112227 .
+
+apqc:PCF17058 p1z:hasAssociatedMetric
+        apqc:MET105538 ,
+        apqc:MET105540 ,
+        apqc:MET105539 .
+
+apqc:PCF17417 p1z:hasAssociatedMetric
+        apqc:MET105122 ,
+        apqc:MET105412 ,
+        apqc:MET105088 ,
+        apqc:MET105411 ,
+        apqc:MET105095 ,
+        apqc:MET105407 ,
+        apqc:MET105121 ,
+        apqc:MET105094 ,
+        apqc:MET105423 ,
+        apqc:MET105119 ,
+        apqc:MET105120 ,
+        apqc:MET105102 ,
+        apqc:MET105096 ,
+        apqc:MET105106 ,
+        apqc:MET105107 ,
+        apqc:MET105419 .
+
+apqc:PCF17422 p1z:hasAssociatedMetric
+        apqc:MET105130 ,
+        apqc:MET105086 ,
+        apqc:MET105132 ,
+        apqc:MET105131 ,
+        apqc:MET105105 ,
+        apqc:MET105087 ,
+        apqc:MET105129 .
+
+apqc:PCF17431 p1z:hasAssociatedMetric
+        apqc:MET105101 .
+
+apqc:PCF20022 p1z:hasAssociatedMetric
+        apqc:MET112594 .
+
+apqc:PCF20599 p1z:hasAssociatedMetric
+        apqc:MET112951 ,
+        apqc:MET101000 ,
+        apqc:MET112945 ,
+        apqc:MET112954 ,
+        apqc:MET112952 ,
+        apqc:MET103628 ,
+        apqc:MET112847 ,
+        apqc:MET112953 ,
+        apqc:MET112946 ,
+        apqc:MET103624 ,
+        apqc:MET112948 ,
+        apqc:MET112957 ,
+        apqc:MET112846 ,
+        apqc:MET112950 .
+
+apqc:PCF20607 p1z:hasAssociatedMetric
+        apqc:MET107951 .
+

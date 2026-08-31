@@ -1,0 +1,1949 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix p1z:  <https://ontology.pointonezero.com/strategy/core#> .
+@prefix apqc: <https://ontology.pointonezero.com/strategy/apqc#> .
+
+<https://ontology.pointonezero.com/strategy/apqc/tasks> a owl:Ontology ;
+    dct:title "P1Z Scope Instances: APQC PCF Cross-Industry Tasks (Level 5, dormant extension)" ;
+    owl:versionInfo "0.3.0" ;
+    dct:source "APQC Process Classification Framework (PCF), Cross-Industry, Excel Version 8.0, February 2026" ;
+    dct:description "APQC PCF level-5 tasks (215 elements), a dormant depth extension. Not loaded by default consumers; an engagement loads this file alongside the spine when work reaches requirements or build stage and needs task-level scope precision. APQC notes tasks vary widely across industries. Joins the spine seamlessly through shared PCF IDs and parentProcess links." ;
+    dct:rights "APQC Process Classification Framework (PCF) is an open standard developed by APQC, a nonprofit that promotes benchmarking and best practices worldwide. The PCF is intended to facilitate organizational improvement through process management and benchmarking, regardless of industry, size, or geography. To download the full PCF or industry-specific versions of the PCF, as well as associated measures and benchmarking, please visit www.apqc.org/pcf." .
+
+apqc:PCF16796 a p1z:Process ;
+    skos:prefLabel "Evaluate acquisition options" ;
+    p1z:apqcId "16796" ;
+    p1z:apqcHierarchyId "1.1.5.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Appraising entities identified as being suitable for acquisition, taking into account the restructuring opportunities in the internal and external context. Verify the appropriateness and viability of the short-listed options. Ensure these entities pertain to the state-of-affairs in the market, as well as fit with the resources and capabilities of the organization." ;
+    p1z:parentProcess apqc:PCF16795 .
+
+apqc:PCF16797 a p1z:Process ;
+    skos:prefLabel "Evaluate merger options" ;
+    p1z:apqcId "16797" ;
+    p1z:apqcHierarchyId "1.1.5.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Appraising entities identified as being suitable for a merger, taking stock of the restructuring opportunities within the firm and the market. Verify the appropriateness and viability of such options. Assess these entities to ensure their pertinence to the contextual state-of-affairs in the market, as well as a fit with the resources and capabilities of the organization itself. (This process can be carried out, in its entirety, by qualified in-house personnel or may be designated to specialist professional services providers.)" ;
+    p1z:parentProcess apqc:PCF16795 .
+
+apqc:PCF16798 a p1z:Process ;
+    skos:prefLabel "Evaluate de-merger options" ;
+    p1z:apqcId "16798" ;
+    p1z:apqcHierarchyId "1.1.5.3.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating departments and subsidiaries within the organization, and/or previously merged entities, to assess the appropriateness of a de-merger, taking account of the fit between these entities as well as any relevant externalities. Examine the pertinence and soundness of a formalized dissociation." ;
+    p1z:parentProcess apqc:PCF16795 .
+
+apqc:PCF16799 a p1z:Process ;
+    skos:prefLabel "Evaluate divesture options" ;
+    p1z:apqcId "16799" ;
+    p1z:apqcHierarchyId "1.1.5.3.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating departments and/or subsidiaries within the organization to assess the appropriateness of a divestment, taking account of all market externalities. Examine any internal entities that have been identified to be suitable for dismemberment from the organization. Ensure the pertinence and soundness of such a move." ;
+    p1z:parentProcess apqc:PCF16795 .
+
+apqc:PCF18083 a p1z:Process ;
+    skos:prefLabel "Select partnerships and relationships to support the extended enterprise" ;
+    p1z:apqcId "18083" ;
+    p1z:apqcHierarchyId "1.2.2.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Supporting the design, manufacture and distribution of product and services through the extended enterprise model.  This is concerned with the strategic decisions on make vs buy, in house or out sourced.  Senior Executives map out how they want to run their business.  Make strategic choices as to whether to buy in components / sub-assemblies, run their own distribution fleet or contract out, own their dealerships or franchise out, etc.  Strategize with partnerships. Collaborate design consideration at strategy level for automotive and procurement act within the Target Operating Model set at strategy level." ;
+    p1z:parentProcess apqc:PCF10047 .
+
+apqc:PCF13289 a p1z:Process ;
+    skos:prefLabel "Identify implications for key operating model business elements that require change" ;
+    p1z:apqcId "13289" ;
+    p1z:apqcHierarchyId "1.2.2.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determine impacts of elements such as staffing, skills, training, new markets, technology, or policies within operating model which needs change." ;
+    p1z:parentProcess apqc:PCF10048 .
+
+apqc:PCF13290 a p1z:Process ;
+    skos:prefLabel "Identify implications for key technology aspects" ;
+    p1z:apqcId "13290" ;
+    p1z:apqcHierarchyId "1.2.2.2.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining key factors for technology ROI, benefits, architecture, etc." ;
+    p1z:parentProcess apqc:PCF10048 .
+
+apqc:PCF19961 a p1z:Process ;
+    skos:prefLabel "Identify and review customer touchpoints" ;
+    p1z:apqcId "19961" ;
+    p1z:apqcHierarchyId "1.2.8.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating methods to gauge customer experiences, expectations, and suggestions. Review both liked and disliked areas of product/services to be delivered. Evaluate touchpoints based on the nature of product/service in the market e.g., billboards, web sites, direct mail, service calls, etc." ;
+    p1z:parentProcess apqc:PCF19960 .
+
+apqc:PCF19962 a p1z:Process ;
+    skos:prefLabel "Assess customer experience across touchpoints" ;
+    p1z:apqcId "19962" ;
+    p1z:apqcHierarchyId "1.2.8.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating customer experiences, expectations, and suggestions in both liked and disliked areas of the product or services. Analyze all modes of communication, human and physical interactions, or customers experience during the relationship lifecycle with your organization. Evaluate the gaps/further development/alterations to the existing product/service to attain better customer response." ;
+    p1z:parentProcess apqc:PCF19960 .
+
+apqc:PCF19963 a p1z:Process ;
+    skos:prefLabel "Perform root cause analysis of problematic customer experiences" ;
+    p1z:apqcId "19963" ;
+    p1z:apqcHierarchyId "1.2.8.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Analyzing the core reason for the customer experience/feedback/response about the product/service to take considerable action for better customer experience." ;
+    p1z:parentProcess apqc:PCF19960 .
+
+apqc:PCF16612 a p1z:Process ;
+    skos:prefLabel "Define and manage personas" ;
+    p1z:apqcId "16612" ;
+    p1z:apqcHierarchyId "1.2.8.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying a set of characteristics that define the demographic and behavioral patterns of the customer. Further, use persona scoring to design your marketing strategies around personas, and measure and optimize your interactions with the contacts classified by a certain persona." ;
+    p1z:parentProcess apqc:PCF19964 .
+
+apqc:PCF19965 a p1z:Process ;
+    skos:prefLabel "Create customer journey maps" ;
+    p1z:apqcId "19965" ;
+    p1z:apqcHierarchyId "1.2.8.2.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating a story of the customer's experience: from initial contact, through the process of engagement and into a long-term relationship. The goal is to teach organization about the customer." ;
+    p1z:parentProcess apqc:PCF19964 .
+
+apqc:PCF19966 a p1z:Process ;
+    skos:prefLabel "Define single view of the customer for the organization" ;
+    p1z:apqcId "19966" ;
+    p1z:apqcHierarchyId "1.2.8.2.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining parameters to show aggregated, consistent, and holistic representation of known data about customers. Define key parameters which enable the tracking of customers and communications across every channel." ;
+    p1z:parentProcess apqc:PCF19964 .
+
+apqc:PCF19967 a p1z:Process ;
+    skos:prefLabel "Define a vision for the customer experience" ;
+    p1z:apqcId "19967" ;
+    p1z:apqcHierarchyId "1.2.8.2.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Establishing a direction and vision on how the organization behaves towards customers in a consistent, effective way. The key attributes for customer experience vision consists of emotional connection, commitments and expectations, compelling value proposition, and ease of understanding the organization's behavior." ;
+    p1z:parentProcess apqc:PCF19964 .
+
+apqc:PCF19968 a p1z:Process ;
+    skos:prefLabel "Validate with customers" ;
+    p1z:apqcId "19968" ;
+    p1z:apqcHierarchyId "1.2.8.2.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating a process to validate the sales process and the assumptions that underpin the business model. Understand if the products/services have a repeatable, scalable business model around that product." ;
+    p1z:parentProcess apqc:PCF19964 .
+
+apqc:PCF19969 a p1z:Process ;
+    skos:prefLabel "Align experience with brand values and business strategies" ;
+    p1z:apqcId "19969" ;
+    p1z:apqcHierarchyId "1.2.8.2.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Aligning and defining a relevant, differentiated, and credible value proposition for the brand. Align experience to ensure that the product and service quality is consistent with brand promise and business strategies." ;
+    p1z:parentProcess apqc:PCF19964 .
+
+apqc:PCF19970 a p1z:Process ;
+    skos:prefLabel "Develop content strategy" ;
+    p1z:apqcId "19970" ;
+    p1z:apqcHierarchyId "1.2.8.2.7" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Planning, development, and management of content-written or in other media. Getting the right content to the right user at the right time through strategic planning of content creation, delivery, and governance." ;
+    p1z:parentProcess apqc:PCF19964 .
+
+apqc:PCF19972 a p1z:Process ;
+    skos:prefLabel "Identify required capabilities" ;
+    p1z:apqcId "19972" ;
+    p1z:apqcHierarchyId "1.2.8.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the necessary skills and competencies required to efficiently collect customer experiences through the support structure." ;
+    p1z:parentProcess apqc:PCF19971 .
+
+apqc:PCF19973 a p1z:Process ;
+    skos:prefLabel "Identify impact on functional processes" ;
+    p1z:apqcId "19973" ;
+    p1z:apqcHierarchyId "1.2.8.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying the affect of customer experience through customer experience support structure on other functions of customer services related to customer." ;
+    p1z:parentProcess apqc:PCF19971 .
+
+apqc:PCF19646 a p1z:Process ;
+    skos:prefLabel "Carry out post launch analytics to test the acceptability in the market" ;
+    p1z:apqcId "19646" ;
+    p1z:apqcHierarchyId "2.1.2.5.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Measuring the performance of marketing once the product/services are launched. This broadly covers measuring user engagement and product's/service's performance in the market." ;
+    p1z:parentProcess apqc:PCF11423 .
+
+apqc:PCF11424 a p1z:Process ;
+    skos:prefLabel "Review market performance" ;
+    p1z:apqcId "11424" ;
+    p1z:apqcHierarchyId "2.1.2.5.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Conducting customer and market analysis to review progress and identify opportunities for increasing market position. Track and review product/service response through sales reports, website statistics, direct response from customers, and survey reports." ;
+    p1z:parentProcess apqc:PCF11423 .
+
+apqc:PCF11425 a p1z:Process ;
+    skos:prefLabel "Review effectiveness of supply chain and distribution network" ;
+    p1z:apqcId "11425" ;
+    p1z:apqcHierarchyId "2.1.2.5.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the performance of supply chain to all departments and logistics from input to shop floor. Seeking performance reviews at each intersection and communication channels. Review effectiveness of supply chain and distribution to check if it is meeting the demands of the various groups and organizations that are concerned with its activities (groups might include customers, partners, suppliers, and vendors)." ;
+    p1z:parentProcess apqc:PCF11423 .
+
+apqc:PCF19647 a p1z:Process ;
+    skos:prefLabel "Apply data and analytics to review supply chain methodologies" ;
+    p1z:apqcId "19647" ;
+    p1z:apqcHierarchyId "2.1.2.5.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Collecting and examining raw data with the purpose of drawing conclusions about that information and correlate gaps and efficiencies to the existing supply chain channels. Apply the information to make better business decisions to the related supply chain methodologies to meet efficiency." ;
+    p1z:parentProcess apqc:PCF11423 .
+
+apqc:PCF11426 a p1z:Process ;
+    skos:prefLabel "Review quality and performance of the product/service" ;
+    p1z:apqcId "11426" ;
+    p1z:apqcHierarchyId "2.1.2.5.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying the quality and performance of the product/service delivered to customers. Analyze data from the customer feedback, audits, measures of customer satisfaction (such as product quality complaints and recalls), and organizational policies on delivery." ;
+    p1z:parentProcess apqc:PCF11423 .
+
+apqc:PCF11427 a p1z:Process ;
+    skos:prefLabel "Conduct financial review" ;
+    p1z:apqcId "11427" ;
+    p1z:apqcHierarchyId "2.1.2.5.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating organization's financial reports and financial reporting processes. Review and document the ROI catered by the product/service delivery to the customer in the market." ;
+    p1z:parentProcess apqc:PCF11423 .
+
+apqc:PCF11428 a p1z:Process ;
+    skos:prefLabel "Conduct new product development process assessment" ;
+    p1z:apqcId "11428" ;
+    p1z:apqcHierarchyId "2.1.2.5.7" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Analyzing the steps involved in the development of new product, its effect on existing product, resources, and functions related to the development of the new product until its sale in the competitive market place." ;
+    p1z:parentProcess apqc:PCF11423 .
+
+apqc:PCF12772 a p1z:Process ;
+    skos:prefLabel "Train employees on appropriate regulatory requirements" ;
+    p1z:apqcId "12772" ;
+    p1z:apqcHierarchyId "2.1.3.5.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Conducting training and impart learning to existing and new employees. Training will relate to the most recent/enforced regulations of the business to meet Manage regulatory requirements [12771]." ;
+    p1z:parentProcess apqc:PCF12771 .
+
+apqc:PCF12773 a p1z:Process ;
+    skos:prefLabel "Maintain records for regulatory agencies" ;
+    p1z:apqcId "12773" ;
+    p1z:apqcHierarchyId "2.1.3.5.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying steps and procedures to manage and regularly update the records for regulatory agencies. Updates will be made to safety procedures, identity and access management, software tools and applications, internal accessibility policies, internal quality parameters, etc." ;
+    p1z:parentProcess apqc:PCF12771 .
+
+apqc:PCF12776 a p1z:Process ;
+    skos:prefLabel "Manage regulatory submission life cycle" ;
+    p1z:apqcId "12776" ;
+    p1z:apqcHierarchyId "2.1.3.5.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determine and follow the timely input and update of regulatory information by assessing reforms, regulatory policies, and guidelines." ;
+    p1z:parentProcess apqc:PCF12771 .
+
+apqc:PCF19991 a p1z:Process ;
+    skos:prefLabel "Define basic functional requirements" ;
+    p1z:apqcId "19991" ;
+    p1z:apqcHierarchyId "2.2.3.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the operations of functions related to the product/service in the marketing environment." ;
+    p1z:parentProcess apqc:PCF11331 .
+
+apqc:PCF16808 a p1z:Process ;
+    skos:prefLabel "Derive interoperability requirements for products and services" ;
+    p1z:apqcId "16808" ;
+    p1z:apqcHierarchyId "2.2.3.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the ability of products and services to work together, exchange and use information in a multi-vendor, multi-network, and multi-service environment." ;
+    p1z:parentProcess apqc:PCF11331 .
+
+apqc:PCF16809 a p1z:Process ;
+    skos:prefLabel "Derive safety requirements for products and services" ;
+    p1z:apqcId "16809" ;
+    p1z:apqcHierarchyId "2.2.3.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Developing safety requirements in line with environmental safety, occupational health and safety, and community health and safety guidelines." ;
+    p1z:parentProcess apqc:PCF11331 .
+
+apqc:PCF16810 a p1z:Process ;
+    skos:prefLabel "Derive security requirements for products and services" ;
+    p1z:apqcId "16810" ;
+    p1z:apqcHierarchyId "2.2.3.1.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Implementing security requirements through authentication and encryption of CE device data stream.  Utilize security measures such as cryptographic protocols and hardware security (smart cards)." ;
+    p1z:parentProcess apqc:PCF11331 .
+
+apqc:PCF16811 a p1z:Process ;
+    skos:prefLabel "Derive regulatory compliance requirements" ;
+    p1z:apqcId "16811" ;
+    p1z:apqcHierarchyId "2.2.3.1.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Meeting regulatory requirements set forth by such directives as RoHS, WEEE, ELV, and REACH." ;
+    p1z:parentProcess apqc:PCF11331 .
+
+apqc:PCF16812 a p1z:Process ;
+    skos:prefLabel "Derive requirements from industry standards" ;
+    p1z:apqcId "16812" ;
+    p1z:apqcHierarchyId "2.2.3.1.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Complying with consumer electronic industry standards developed by the Consumer Technology Association (CTA)." ;
+    p1z:parentProcess apqc:PCF11331 .
+
+apqc:PCF19992 a p1z:Process ;
+    skos:prefLabel "Develop user experience requirements" ;
+    p1z:apqcId "19992" ;
+    p1z:apqcHierarchyId "2.2.3.1.7" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying and creating steps and tools to develop the user experience." ;
+    p1z:parentProcess apqc:PCF11331 .
+
+apqc:PCF16814 a p1z:Process ;
+    skos:prefLabel "Derive \u2018services-as-a-product\u2019 offering" ;
+    p1z:apqcId "16814" ;
+    p1z:apqcHierarchyId "2.2.3.1.8" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Productizing the service by defining the scope of the service/cost.  Target market for the service and make the service more tangible." ;
+    p1z:parentProcess apqc:PCF11331 .
+
+apqc:PCF19994 a p1z:Process ;
+    skos:prefLabel "Identify requirements for product/service design/development partners" ;
+    p1z:apqcId "19994" ;
+    p1z:apqcHierarchyId "2.3.1.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining essential elements for collaborators involved in blueprint/development of product/service." ;
+    p1z:parentProcess apqc:PCF10083 .
+
+apqc:PCF16819 a p1z:Process ;
+    skos:prefLabel "Design for manufacturing" ;
+    p1z:apqcId "16819" ;
+    p1z:apqcHierarchyId "2.3.1.8.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Carrying out the steps necessary to appropriately manufacture correct parts.  This includes designing application, product hardware, mold, casting, mechanical, and electrical aspects of the product." ;
+    p1z:parentProcess apqc:PCF19995 .
+
+apqc:PCF16820 a p1z:Process ;
+    skos:prefLabel "Design for product servicing" ;
+    p1z:apqcId "16820" ;
+    p1z:apqcHierarchyId "2.3.1.8.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating product application service view to allow for product servicing and refurbishing." ;
+    p1z:parentProcess apqc:PCF19995 .
+
+apqc:PCF16821 a p1z:Process ;
+    skos:prefLabel "Design for re-manufacturing" ;
+    p1z:apqcId "16821" ;
+    p1z:apqcHierarchyId "2.3.1.8.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Replacing core components and republishing." ;
+    p1z:parentProcess apqc:PCF19995 .
+
+apqc:PCF16822 a p1z:Process ;
+    skos:prefLabel "Review product troubleshooting methodology" ;
+    p1z:apqcId "16822" ;
+    p1z:apqcHierarchyId "2.3.1.8.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Reviewing the design and approach for troubleshooting the product." ;
+    p1z:parentProcess apqc:PCF19995 .
+
+apqc:PCF16818 a p1z:Process ;
+    skos:prefLabel "Design and manage product data, design, and bill of materials" ;
+    p1z:apqcId "16818" ;
+    p1z:apqcHierarchyId "2.3.1.8.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Designing the BOM-Bill of material, manufacturing BOM and Service BOMA bill of materials list for all the raw materials and components/parts used in the producing end product." ;
+    p1z:parentProcess apqc:PCF19995 .
+
+apqc:PCF16823 a p1z:Process ;
+    skos:prefLabel "Design for product upgrades" ;
+    p1z:apqcId "16823" ;
+    p1z:apqcHierarchyId "2.3.1.8.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Designing hardware and software upgrade techniques." ;
+    p1z:parentProcess apqc:PCF19995 .
+
+apqc:PCF11417 a p1z:Process ;
+    skos:prefLabel "Monitor initial production runs" ;
+    p1z:apqcId "11417" ;
+    p1z:apqcHierarchyId "2.3.3.4.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Regularly monitoring production runs of the production and/or delivery operations." ;
+    p1z:parentProcess apqc:PCF10100 .
+
+apqc:PCF10114 a p1z:Process ;
+    skos:prefLabel "Understand consumer needs and historical behaviors" ;
+    p1z:apqcId "10114" ;
+    p1z:apqcHierarchyId "3.1.1.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying the factors that drive the targeted market segment. Model customer purchasing patterns, and forecast their future purchasing behavior." ;
+    p1z:parentProcess apqc:PCF10108 .
+
+apqc:PCF21424 a p1z:Process ;
+    skos:prefLabel "Predict customer purchasing behavior" ;
+    p1z:apqcId "21424" ;
+    p1z:apqcHierarchyId "3.1.1.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Using customer segmentation tools to examine past customer behavior to predict future purchasing patterns." ;
+    p1z:parentProcess apqc:PCF10108 .
+
+apqc:PCF10115 a p1z:Process ;
+    skos:prefLabel "Determine market share gain/loss" ;
+    p1z:apqcId "10115" ;
+    p1z:apqcHierarchyId "3.1.1.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the increase or decrease of the company's sales volume in the targeted markets. Conduct an analysis to determine the factors and underlying causes that affect the changes in the demand for products or services offered. Consider changes in offerings or in the business strategy to regain or increase the market share." ;
+    p1z:parentProcess apqc:PCF10109 .
+
+apqc:PCF18941 a p1z:Process ;
+    skos:prefLabel "Identify under-served and saturated market segments" ;
+    p1z:apqcId "18941" ;
+    p1z:apqcHierarchyId "3.1.2.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining which groups of potential customers do not yet, or already do have access to the product or a service that the company produces or markets. Use those findings to create specialized product offerings and differentiated marketing campaigns." ;
+    p1z:parentProcess apqc:PCF10117 .
+
+apqc:PCF10120 a p1z:Process ;
+    skos:prefLabel "Test with customers/consumers" ;
+    p1z:apqcId "10120" ;
+    p1z:apqcHierarchyId "3.1.2.4.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Validating identified market opportunities by testing company's offerings on limited-size samples of the consumer population that are hypothesized to be representative of the target market at large and to have similar purchasing behavior. The feedback gained through consumer testing can be used to modify or reject product offerings before their full scale launch, saving the company valuable resources, should the initial offering not be successful." ;
+    p1z:parentProcess apqc:PCF10119 .
+
+apqc:PCF10121 a p1z:Process ;
+    skos:prefLabel "Confirm internal capabilities" ;
+    p1z:apqcId "10121" ;
+    p1z:apqcHierarchyId "3.1.2.4.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Verifying that the company has sufficient infrastructure and resources to deliver their offerings in a timely and cost-effective manner, and that it is able to scale up from the small-scale market samples, used for consumer testing, to the entire identified market segment." ;
+    p1z:parentProcess apqc:PCF10119 .
+
+apqc:PCF16590 a p1z:Process ;
+    skos:prefLabel "Define omni-channel strategy" ;
+    p1z:apqcId "16590" ;
+    p1z:apqcHierarchyId "3.2.4.7.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Devising a strategy to market company's products or services seamlessly through all or most channels that are in widespread use among the target market. This may mean cross-channel access to customer preferences and purchasing history to accept returned merchandise, provide refunds, resolve payment issues or to provide technical support." ;
+    p1z:parentProcess apqc:PCF20004 .
+
+apqc:PCF16591 a p1z:Process ;
+    skos:prefLabel "Define omni-channel requirements" ;
+    p1z:apqcId "16591" ;
+    p1z:apqcHierarchyId "3.2.4.7.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying necessary preconditions that a channel should fulfill in order to be included as one of the adopted channels, such as required throughput capacities, service capabilities, competitive pricing, and alignment with organizational marketing strategies." ;
+    p1z:parentProcess apqc:PCF20004 .
+
+apqc:PCF16592 a p1z:Process ;
+    skos:prefLabel "Develop omni-channel policies and procedures" ;
+    p1z:apqcId "16592" ;
+    p1z:apqcHierarchyId "3.2.4.7.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the detailed policies and procedures that each of the channels needs to follow in order to conform to the organizational marketing strategy and to provide seamless customer service experience." ;
+    p1z:parentProcess apqc:PCF20004 .
+
+apqc:PCF10190 a p1z:Process ;
+    skos:prefLabel "Perform sales calls" ;
+    p1z:apqcId "10190" ;
+    p1z:apqcHierarchyId "3.5.1.8.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Communicating with customers and prospects with the intent of creating sales opportunities. Reach out to existing and prospective customers through alternate media and networking channels, apart from cold calling/emailing." ;
+    p1z:parentProcess apqc:PCF10184 .
+
+apqc:PCF10191 a p1z:Process ;
+    skos:prefLabel "Perform pre-sales activities" ;
+    p1z:apqcId "10191" ;
+    p1z:apqcHierarchyId "3.5.1.8.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Capitalizing on sales calls by pitching on bids and closing deals. Outline the nature and scope of the work, draft agreement terms, prepare proposals and agreements, and propose timelines and prices." ;
+    p1z:parentProcess apqc:PCF10184 .
+
+apqc:PCF20012 a p1z:Process ;
+    skos:prefLabel "Manage customer meetings/workshops" ;
+    p1z:apqcId "20012" ;
+    p1z:apqcHierarchyId "3.5.1.8.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Arranging and leading meetings, seminars, workshops and training events with customers to educate them about current offerings, best practices and technological advances to provide more value to customers and to increase their attrition and loyalty." ;
+    p1z:parentProcess apqc:PCF10184 .
+
+apqc:PCF10192 a p1z:Process ;
+    skos:prefLabel "Close the sale" ;
+    p1z:apqcId "10192" ;
+    p1z:apqcHierarchyId "3.5.1.8.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Formalizing a sale by reaching an agreement on terms of the deal. Negotiate on the price, and reach a consensus on the terms and conditions." ;
+    p1z:parentProcess apqc:PCF10184 .
+
+apqc:PCF10193 a p1z:Process ;
+    skos:prefLabel "Record outcome of sales process" ;
+    p1z:apqcId "10193" ;
+    p1z:apqcHierarchyId "3.5.1.8.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable true ;
+    skos:definition "Completing all the paper-work associated with the sale of its products/services. Exchange any pertinent legal/financial information required for completing the sale, signing of a contract/work-order, and issuing copies of bills/invoices." ;
+    p1z:parentProcess apqc:PCF10184 .
+
+apqc:PCF16598 a p1z:Process ;
+    skos:prefLabel "Collect and merge internal and third-party customer information" ;
+    p1z:apqcId "16598" ;
+    p1z:apqcHierarchyId "3.5.2.5.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Gathering the data about customers. Combine the information available locally with the data obtained from external sources." ;
+    p1z:parentProcess apqc:PCF14208 .
+
+apqc:PCF16599 a p1z:Process ;
+    skos:prefLabel "De-duplicate customer data" ;
+    p1z:apqcId "16599" ;
+    p1z:apqcHierarchyId "3.5.2.5.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Eliminating redundant information in customer data." ;
+    p1z:parentProcess apqc:PCF14208 .
+
+apqc:PCF10201 a p1z:Process ;
+    skos:prefLabel "Administer key account details" ;
+    p1z:apqcId "10201" ;
+    p1z:apqcHierarchyId "3.5.4.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Managing essential information of customer accounts." ;
+    p1z:parentProcess apqc:PCF10195 .
+
+apqc:PCF10202 a p1z:Process ;
+    skos:prefLabel "Retrieve full customer details" ;
+    p1z:apqcId "10202" ;
+    p1z:apqcHierarchyId "3.5.4.2.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Obtaining detailed information about customers." ;
+    p1z:parentProcess apqc:PCF10195 .
+
+apqc:PCF10203 a p1z:Process ;
+    skos:prefLabel "Modify involved party details" ;
+    p1z:apqcId "10203" ;
+    p1z:apqcHierarchyId "3.5.4.2.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Altering information about involved parties." ;
+    p1z:parentProcess apqc:PCF10195 .
+
+apqc:PCF10204 a p1z:Process ;
+    skos:prefLabel "Record address details" ;
+    p1z:apqcId "10204" ;
+    p1z:apqcHierarchyId "3.5.4.2.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Documenting address information." ;
+    p1z:parentProcess apqc:PCF10195 .
+
+apqc:PCF10205 a p1z:Process ;
+    skos:prefLabel "Record contact details" ;
+    p1z:apqcId "10205" ;
+    p1z:apqcHierarchyId "3.5.4.2.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Documenting contact information." ;
+    p1z:parentProcess apqc:PCF10195 .
+
+apqc:PCF10206 a p1z:Process ;
+    skos:prefLabel "Record key customer communication profile details" ;
+    p1z:apqcId "10206" ;
+    p1z:apqcHierarchyId "3.5.4.2.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Providing information about important business rules regarding communicating with customers." ;
+    p1z:parentProcess apqc:PCF10195 .
+
+apqc:PCF10207 a p1z:Process ;
+    skos:prefLabel "Review involved party information" ;
+    p1z:apqcId "10207" ;
+    p1z:apqcHierarchyId "3.5.4.2.7" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Revising information about involved parties." ;
+    p1z:parentProcess apqc:PCF10195 .
+
+apqc:PCF10208 a p1z:Process ;
+    skos:prefLabel "Terminate involved party information" ;
+    p1z:apqcId "10208" ;
+    p1z:apqcHierarchyId "3.5.4.2.8" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Dismissing information about involved parties." ;
+    p1z:parentProcess apqc:PCF10195 .
+
+apqc:PCF20019 a p1z:Process ;
+    skos:prefLabel "Provide certification enablement training" ;
+    p1z:apqcId "20019" ;
+    p1z:apqcHierarchyId "3.5.5.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Provide training and certification to develop strategies for marketing-driven sales." ;
+    p1z:parentProcess apqc:PCF10211 .
+
+apqc:PCF20020 a p1z:Process ;
+    skos:prefLabel "Manage certifications and skills" ;
+    p1z:apqcId "20020" ;
+    p1z:apqcHierarchyId "3.5.5.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Reviewing, processing and issuing certifications and accrediting skills and competencies." ;
+    p1z:parentProcess apqc:PCF10211 .
+
+apqc:PCF20021 a p1z:Process ;
+    skos:prefLabel "Provide support to partners/alliances" ;
+    p1z:apqcId "20021" ;
+    p1z:apqcHierarchyId "3.5.5.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Backing sales partners and strategic alliances." ;
+    p1z:parentProcess apqc:PCF10211 .
+
+apqc:PCF19567 a p1z:Process ;
+    skos:prefLabel "Automate and control plant" ;
+    p1z:apqcId "19567" ;
+    p1z:apqcHierarchyId "4.3.2.5.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating and applying technology to monitor and control the production and delivery of products and services. Automation involves a broad range of technologies." ;
+    p1z:parentProcess apqc:PCF19566 .
+
+apqc:PCF19568 a p1z:Process ;
+    skos:prefLabel "Perform advanced process control" ;
+    p1z:apqcId "19568" ;
+    p1z:apqcHierarchyId "4.3.2.5.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Including a broad range of techniques and technologies implemented within industrial process control systems that are routinely reviewed, audited, and improved, advanced process controls typically address particular performance or economic improvement opportunities. An advanced set of process control measures can be used to reduce variation and identify primary improvement options. Results of analysis are fed back into process design for incorporation into production." ;
+    p1z:parentProcess apqc:PCF19566 .
+
+apqc:PCF19569 a p1z:Process ;
+    skos:prefLabel "Perform real-time optimization" ;
+    p1z:apqcId "19569" ;
+    p1z:apqcHierarchyId "4.3.2.5.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Helping organizations increase performance and efficiency, real-time optimization is a category of closed-loop process control that aims at optimizing process performance in real time for systems. It is normally built upon model-based optimization systems and is usually large scale. Real-time optimization automatically detects errors, and can modify and eliminate both random and non-random errors, as well as analyze and monitor all systems involved." ;
+    p1z:parentProcess apqc:PCF19566 .
+
+apqc:PCF19570 a p1z:Process ;
+    skos:prefLabel "Manage plant alarms and alerts" ;
+    p1z:apqcId "19570" ;
+    p1z:apqcHierarchyId "4.3.2.5.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Applying human factors and instrumentation engineering and systems thinking to manage the design of an alarm or alert system to increase its usability. Typical challenges include having too many alarms in a plant, poorly designed alarms/alerts, improperly set alarm/alert points, unclear alarm/alert messages, etc. Poor alarm management is one of the leading causes of unplanned downtime." ;
+    p1z:parentProcess apqc:PCF19566 .
+
+apqc:PCF12708 a p1z:Process ;
+    skos:prefLabel "Determine quality of controlled part" ;
+    p1z:apqcId "12708" ;
+    p1z:apqcHierarchyId "4.4.2.5.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Implement a checks and balances system to verify that returned parts meet acceptable quality standards to determine appropriate disposition activity." ;
+    p1z:parentProcess apqc:PCF20109 .
+
+apqc:PCF10366 a p1z:Process ;
+    skos:prefLabel "Perform salvage activities" ;
+    p1z:apqcId "10366" ;
+    p1z:apqcHierarchyId "4.4.2.5.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Executing activities for reinstating the returned products. Present the customer with additional incentives of compensation in case of any defective products delivery or any discrepancy in the product specifications in order to save the order from being permanently returned." ;
+    p1z:parentProcess apqc:PCF20109 .
+
+apqc:PCF21604 a p1z:Process ;
+    skos:prefLabel "Manage repair/refurbishment" ;
+    p1z:apqcId "21604" ;
+    p1z:apqcHierarchyId "4.4.2.5.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Administering the reinstatement of the returned product in order to return them back to customers. Repair or remanufacture the defective or ineffective products returned by the customer. Process the delivery of the repaired or remanufactured products back to the customer." ;
+    p1z:parentProcess apqc:PCF20109 .
+
+apqc:PCF21605 a p1z:Process ;
+    skos:prefLabel "Return to finished goods inventory" ;
+    p1z:apqcId "21605" ;
+    p1z:apqcHierarchyId "4.4.2.5.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Moving a returned product back to inventory or stock. Whether a product is sufficient as returned, repaired, or refurbished, moving that product back to inventory for resale or returning to customer is the fnal step in Manage disposition of returned products." ;
+    p1z:parentProcess apqc:PCF20109 .
+
+apqc:PCF21619 a p1z:Process ;
+    skos:prefLabel "Process customer request" ;
+    p1z:apqcId "21619" ;
+    p1z:apqcHierarchyId "4.4.5.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Soliciting or acquiring information using various sources such as databases, customer interactions, and customer request forms. Hand them further up the hierarchy to deal with them. Categorize the user's request, determining if the request is supportable and prioritizing the request." ;
+    p1z:parentProcess apqc:PCF21618 .
+
+apqc:PCF21620 a p1z:Process ;
+    skos:prefLabel "Create customer profile" ;
+    p1z:apqcId "21620" ;
+    p1z:apqcHierarchyId "4.4.5.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Documenting the individual customer service requirements solicited, along with personal information of the customers, in order to generate customized profiles that hasten the delivery process." ;
+    p1z:parentProcess apqc:PCF21618 .
+
+apqc:PCF21621 a p1z:Process ;
+    skos:prefLabel "Generate last mile delivery order" ;
+    p1z:apqcId "21621" ;
+    p1z:apqcHierarchyId "4.4.5.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Designing a short-term agreement between the service provider and customer. One-time services are ordered by the service recipient and resource-related billing is performed upon completion. Use the service order to document service and customer service work." ;
+    p1z:parentProcess apqc:PCF21618 .
+
+apqc:PCF21623 a p1z:Process ;
+    skos:prefLabel "Create resourcing plan and schedule" ;
+    p1z:apqcId "21623" ;
+    p1z:apqcHierarchyId "4.4.5.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Developing a plan for sourcing and deploying the resources required to fulfill customer service needs. Document a detailed summary of all types of resources (equipment, finance, personnel, time, etc.) required to complete customer service requests and procure these resources. Identify and assess various sources in order to effectively create a resourcing plan." ;
+    p1z:parentProcess apqc:PCF21622 .
+
+apqc:PCF21624 a p1z:Process ;
+    skos:prefLabel "Create last mile delivery service order fulfillment schedule" ;
+    p1z:apqcId "21624" ;
+    p1z:apqcHierarchyId "4.4.5.2.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Designing a detailed summary of customer service order requirements, along with information concerning the timing and duration for these services. Categorize the customer needs. Monitor the services delivered." ;
+    p1z:parentProcess apqc:PCF21622 .
+
+apqc:PCF21626 a p1z:Process ;
+    skos:prefLabel "Organize daily last mile delivery order fulfillment schedule" ;
+    p1z:apqcId "21626" ;
+    p1z:apqcHierarchyId "4.4.5.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Laying out a daily plan of specific service orders that need to be fulfilled. Document and systematically order these activities to ensure high effectiveness and efficiency." ;
+    p1z:parentProcess apqc:PCF21625 .
+
+apqc:PCF21627 a p1z:Process ;
+    skos:prefLabel "Execute product delivery" ;
+    p1z:apqcId "21627" ;
+    p1z:apqcHierarchyId "4.4.5.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Dispatching and delivering the resources needed for the specific service requirements from the source/warehouse. Manage the dispatch, transportation, and delivery of the services." ;
+    p1z:parentProcess apqc:PCF21625 .
+
+apqc:PCF21628 a p1z:Process ;
+    skos:prefLabel "Manage last mile delivery order fulfillment" ;
+    p1z:apqcId "21628" ;
+    p1z:apqcHierarchyId "4.4.5.3.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Handling and managing orders fulfilled, along with the orders are not or partially fulfilled to track the order fulfillment progress. Use electronic devices such as trackers and GPS in order track and ensure delivery of the orders." ;
+    p1z:parentProcess apqc:PCF21625 .
+
+apqc:PCF21630 a p1z:Process ;
+    skos:prefLabel "Identify completed last mile delivery orders for feedback" ;
+    p1z:apqcId "21630" ;
+    p1z:apqcHierarchyId "4.4.5.4.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the service orders that have been successfully delivered. Identify the service orders completed and delivered to the customer. Leverage communication systems to ensure coordination with the customers in order to avoid mishaps." ;
+    p1z:parentProcess apqc:PCF21629 .
+
+apqc:PCF21631 a p1z:Process ;
+    skos:prefLabel "Identify incomplete last mile delivery orders and last mile delivery service failures" ;
+    p1z:apqcId "21631" ;
+    p1z:apqcHierarchyId "4.4.5.4.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining orders which have not been completed or delivered. Identify the service orders that are partially or entirely incomplete, as well as the orders that have not been delivered to the customer. Use techniques such as project trackers to recognize the progress of the service orders." ;
+    p1z:parentProcess apqc:PCF21629 .
+
+apqc:PCF21632 a p1z:Process ;
+    skos:prefLabel "Solicit customer feedback on last mile services delivered" ;
+    p1z:apqcId "21632" ;
+    p1z:apqcHierarchyId "4.4.5.4.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Obtaining and procuring customer reviews or feedback on the services delivered. Design a customer feedback form, or communicate with the customer through the phone or online." ;
+    p1z:parentProcess apqc:PCF21629 .
+
+apqc:PCF21633 a p1z:Process ;
+    skos:prefLabel "Process customer feedback on last mile services delivered" ;
+    p1z:apqcId "21633" ;
+    p1z:apqcHierarchyId "4.4.5.4.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Assessing and incorporating customer reviews/feedback into the service plan to ensure high quality of service." ;
+    p1z:parentProcess apqc:PCF21629 .
+
+apqc:PCF20066 a p1z:Process ;
+    skos:prefLabel "Establish people objectives" ;
+    p1z:apqcId "20066" ;
+    p1z:apqcHierarchyId "5.4.1.6.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Providing the workforce with a plan of action and goals necessary to provide a service. Make sure that those objectives are met." ;
+    p1z:parentProcess apqc:PCF20065 .
+
+apqc:PCF20067 a p1z:Process ;
+    skos:prefLabel "Establish engagement rules" ;
+    p1z:apqcId "20067" ;
+    p1z:apqcHierarchyId "5.4.1.6.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Establishing guidelines for how resources engage with the customer. For example, set rules of accountability, interaction, and accommodation when engaging the customer. Resources should be polite, empathetic, and attentive." ;
+    p1z:parentProcess apqc:PCF20065 .
+
+apqc:PCF20098 a p1z:Process ;
+    skos:prefLabel "Define issue" ;
+    p1z:apqcId "20098" ;
+    p1z:apqcHierarchyId "6.3.2.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining the issue of the claim. The warranty team will look into the issue and understand whether it is covered by the claim code or if more detail is required. Field service will be scheduled to further qualify the definition of the issue and to collect more evidence." ;
+    p1z:parentProcess apqc:PCF20097 .
+
+apqc:PCF12677 a p1z:Process ;
+    skos:prefLabel "Schedule field service" ;
+    p1z:apqcId "12677" ;
+    p1z:apqcHierarchyId "6.3.2.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Scheduling additional investigative field service. This is performed for high priority claims or claims that require additional investigation. Field service engineers will gather additional information, perform further investigation, and qualify the definition of the issue." ;
+    p1z:parentProcess apqc:PCF20097 .
+
+apqc:PCF12678 a p1z:Process ;
+    skos:prefLabel "Request and receive defective part" ;
+    p1z:apqcId "12678" ;
+    p1z:apqcHierarchyId "6.3.2.3.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Requesting receipt of a defective part for further investigation." ;
+    p1z:parentProcess apqc:PCF20097 .
+
+apqc:PCF20099 a p1z:Process ;
+    skos:prefLabel "Investigate issue/perform root cause analysis" ;
+    p1z:apqcId "20099" ;
+    p1z:apqcHierarchyId "6.3.2.3.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Investigating claims by an appropriate functional representative. Once the issue has been clearly defined and diagnosed and a recommendation for corrective action is determined, it will be provided to the warranty management team." ;
+    p1z:parentProcess apqc:PCF20097 .
+
+apqc:PCF20100 a p1z:Process ;
+    skos:prefLabel "Receive investigation result/recommendation for corrective action" ;
+    p1z:apqcId "20100" ;
+    p1z:apqcHierarchyId "6.3.2.3.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Receiving investigative results to assess claim approval or denial. The warranty team will assess the results of the investigation and the recommendations for corrective action." ;
+    p1z:parentProcess apqc:PCF20097 .
+
+apqc:PCF10324 a p1z:Process ;
+    skos:prefLabel "Process customer request" ;
+    p1z:apqcId "10324" ;
+    p1z:apqcHierarchyId "6.3.4.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Soliciting or acquiring information using various sources such as databases, customer interactions, and customer request forms. Hand them further up the hierarchy to deal with them. Categorize the user's request, determining if the request is supportable and prioritizing the request." ;
+    p1z:parentProcess apqc:PCF10320 .
+
+apqc:PCF10325 a p1z:Process ;
+    skos:prefLabel "Create customer profile" ;
+    p1z:apqcId "10325" ;
+    p1z:apqcHierarchyId "6.3.4.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Documenting the individual customer service requirements solicited, along with personal information of the customers, in order to generate customized profiles that hasten the delivery process." ;
+    p1z:parentProcess apqc:PCF10320 .
+
+apqc:PCF10326 a p1z:Process ;
+    skos:prefLabel "Generate service order" ;
+    p1z:apqcId "10326" ;
+    p1z:apqcHierarchyId "6.3.4.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Designing a short-term agreement between the service provider and customer. One-time services are ordered by the service recipient and resource-related billing is performed upon completion. Use the service order to document service and customer service work." ;
+    p1z:parentProcess apqc:PCF10320 .
+
+apqc:PCF10327 a p1z:Process ;
+    skos:prefLabel "Create resourcing plan and schedule" ;
+    p1z:apqcId "10327" ;
+    p1z:apqcHierarchyId "6.3.4.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Developing a plan for sourcing and deploying the resources required to fulfill customer service needs. Document a detailed summary of all types of resources (equipment, finance, personnel, time, etc.) required to complete customer service requests and procure these resources. Identify and assess various sources in order to effectively create a resourcing plan." ;
+    p1z:parentProcess apqc:PCF10321 .
+
+apqc:PCF10328 a p1z:Process ;
+    skos:prefLabel "Create service order fulfillment schedule" ;
+    p1z:apqcId "10328" ;
+    p1z:apqcHierarchyId "6.3.4.2.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Designing a detailed summary of customer service order requirements, along with information concerning the timing and duration for these services. Categorize the customer needs. Monitor the services delivered." ;
+    p1z:parentProcess apqc:PCF10321 .
+
+apqc:PCF10330 a p1z:Process ;
+    skos:prefLabel "Organize daily service order fulfillment schedule" ;
+    p1z:apqcId "10330" ;
+    p1z:apqcHierarchyId "6.3.4.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Laying out a daily plan of specific service orders that need to be fulfilled. Document and systematically order these activities to ensure high effectiveness and efficiency." ;
+    p1z:parentProcess apqc:PCF10322 .
+
+apqc:PCF10331 a p1z:Process ;
+    skos:prefLabel "Execute product repair" ;
+    p1z:apqcId "10331" ;
+    p1z:apqcHierarchyId "6.3.4.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Dispatching and delivering the resources needed for the specific service requirements from the source/warehouse. Manage the dispatch, transportation, and delivery of the services." ;
+    p1z:parentProcess apqc:PCF10322 .
+
+apqc:PCF10332 a p1z:Process ;
+    skos:prefLabel "Manage service order fulfillment" ;
+    p1z:apqcId "10332" ;
+    p1z:apqcHierarchyId "6.3.4.3.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Handling and managing orders fulfilled, along with the orders are not or partially fulfilled to track the order fulfillment progress. Use electronic devices such as trackers and GPS in order track and ensure delivery of the orders." ;
+    p1z:parentProcess apqc:PCF10322 .
+
+apqc:PCF10334 a p1z:Process ;
+    skos:prefLabel "Identify completed service orders for feedback" ;
+    p1z:apqcId "10334" ;
+    p1z:apqcHierarchyId "6.3.4.4.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the service orders that have been successfully delivered. Identify the service orders completed and delivered to the customer. Leverage communication systems to ensure coordination with the customers in order to avoid mishaps." ;
+    p1z:parentProcess apqc:PCF10323 .
+
+apqc:PCF10335 a p1z:Process ;
+    skos:prefLabel "Identify incomplete service orders and service failures" ;
+    p1z:apqcId "10335" ;
+    p1z:apqcHierarchyId "6.3.4.4.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable true ;
+    skos:definition "Determining orders which have not been completed or delivered. Identify the service orders that are partially or entirely incomplete, as well as the orders that have not been delivered to the customer. Use techniques such as project trackers to recognize the progress of the service orders." ;
+    p1z:parentProcess apqc:PCF10323 .
+
+apqc:PCF10336 a p1z:Process ;
+    skos:prefLabel "Solicit customer feedback on services delivered" ;
+    p1z:apqcId "10336" ;
+    p1z:apqcHierarchyId "6.3.4.4.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Obtaining and procuring customer reviews or feedback on the services delivered. Design a customer feedback form, or communicate with the customer through the phone or online." ;
+    p1z:parentProcess apqc:PCF10323 .
+
+apqc:PCF10337 a p1z:Process ;
+    skos:prefLabel "Process customer feedback on services delivered" ;
+    p1z:apqcId "10337" ;
+    p1z:apqcHierarchyId "6.3.4.4.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Assessing and incorporating customer reviews/feedback into the service plan to ensure high quality of service." ;
+    p1z:parentProcess apqc:PCF10323 .
+
+apqc:PCF21640 a p1z:Process ;
+    skos:prefLabel "Develop and manage strategic workforce planning framework" ;
+    p1z:apqcId "21640" ;
+    p1z:apqcHierarchyId "7.1.2.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining and maintaining the structure, principles, and approaches used to assess workforce supply and demand, capabilities, and gaps over the strategic planning horizon." ;
+    p1z:parentProcess apqc:PCF21693 .
+
+apqc:PCF10424 a p1z:Process ;
+    skos:prefLabel "Perform business unit workforce planning" ;
+    p1z:apqcId "10424" ;
+    p1z:apqcHierarchyId "7.1.2.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the requirements for employees and the need for employee resourcing for each unit/function. Lay out a plan detailing employee resourcing requirements of individual functions and the organization as a whole." ;
+    p1z:parentProcess apqc:PCF21693 .
+
+apqc:PCF21641 a p1z:Process ;
+    skos:prefLabel "Advise business in implementing strategic workforce planning" ;
+    p1z:apqcId "21641" ;
+    p1z:apqcHierarchyId "7.1.2.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Providing guidance and expertise to business leaders on applying the strategic workforce planning framework to inform workforce decisions, plans, and initiatives." ;
+    p1z:parentProcess apqc:PCF21693 .
+
+apqc:PCF21642 a p1z:Process ;
+    skos:prefLabel "Partner with the business to execute workforce plan" ;
+    p1z:apqcId "21642" ;
+    p1z:apqcHierarchyId "7.1.2.1.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Collaborating with business leaders to translate workforce plans into actionable initiatives and to support execution of agreed workforce actions." ;
+    p1z:parentProcess apqc:PCF21693 .
+
+apqc:PCF21643 a p1z:Process ;
+    skos:prefLabel "Monitor and adjust strategic workforce plan" ;
+    p1z:apqcId "21643" ;
+    p1z:apqcHierarchyId "7.1.2.1.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Tracking workforce outcomes and changes in business needs to update workforce plans and address emerging gaps, risks, or opportunities." ;
+    p1z:parentProcess apqc:PCF21693 .
+
+apqc:PCF21644 a p1z:Process ;
+    skos:prefLabel "Establish wages, salaries, and benefits strategy" ;
+    p1z:apqcId "21644" ;
+    p1z:apqcHierarchyId "7.1.2.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining the strategic approach for wages, salaries, and benefits to support workforce attraction, retention, performance, and alignment with organizational objectives and market conditions." ;
+    p1z:parentProcess apqc:PCF10425 .
+
+apqc:PCF10210 a p1z:Process ;
+    skos:prefLabel "Establish incentive strategy" ;
+    p1z:apqcId "10210" ;
+    p1z:apqcHierarchyId "7.1.2.2.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating a scheme of rewards and recognition for employees to promote a results-based culture. Create specific incentives to reach desired outcomes, such as landing key clients, growing the customer base, providing exceptional servicing, and increasing profit margins." ;
+    p1z:parentProcess apqc:PCF10425 .
+
+apqc:PCF21645 a p1z:Process ;
+    skos:prefLabel "Establish a severance pay strategy" ;
+    p1z:apqcId "21645" ;
+    p1z:apqcHierarchyId "7.1.2.2.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining the approach to severance pay, including principles and guidelines, to support workforce transitions while managing financial, legal, and reputational considerations." ;
+    p1z:parentProcess apqc:PCF10425 .
+
+apqc:PCF20124 a p1z:Process ;
+    skos:prefLabel "Complete position classification and level of experience" ;
+    p1z:apqcId "20124" ;
+    p1z:apqcHierarchyId "7.2.5.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying the requirements for the position to be filled. Determine the experience and skills necessary to perform the tasks outlined." ;
+    p1z:parentProcess apqc:PCF10467 .
+
+apqc:PCF21702 a p1z:Process ;
+    skos:prefLabel "Identify critical roles" ;
+    p1z:apqcId "21702" ;
+    p1z:apqcHierarchyId "7.3.3.4.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining roles that are essential to organizational performance or continuity and that require succession planning." ;
+    p1z:parentProcess apqc:PCF21701 .
+
+apqc:PCF21703 a p1z:Process ;
+    skos:prefLabel "Select potential successors" ;
+    p1z:apqcId "21703" ;
+    p1z:apqcHierarchyId "7.3.3.4.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying and selecting employees with the potential to assume critical roles based on defined criteria and future capability requirements." ;
+    p1z:parentProcess apqc:PCF21701 .
+
+apqc:PCF21704 a p1z:Process ;
+    skos:prefLabel "Develop and implement individual succession plans" ;
+    p1z:apqcId "21704" ;
+    p1z:apqcHierarchyId "7.3.3.4.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating and executing development plans for identified successors to prepare them for future roles through targeted learning and experience opportunities." ;
+    p1z:parentProcess apqc:PCF21701 .
+
+apqc:PCF21705 a p1z:Process ;
+    skos:prefLabel "Review and update succession plans" ;
+    p1z:apqcId "21705" ;
+    p1z:apqcHierarchyId "7.3.3.4.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Reviewing succession plans on a regular basis and updating them to reflect changes in roles, talent, organizational priorities, and performance outcomes." ;
+    p1z:parentProcess apqc:PCF21701 .
+
+apqc:PCF20126 a p1z:Process ;
+    skos:prefLabel "Liaise with external certification authorities" ;
+    p1z:apqcId "20126" ;
+    p1z:apqcHierarchyId "7.3.4.6.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Coordinating with third party certification authorities to provide training and certifications for necessary skills." ;
+    p1z:parentProcess apqc:PCF20125 .
+
+apqc:PCF20127 a p1z:Process ;
+    skos:prefLabel "Administer certification tests" ;
+    p1z:apqcId "20127" ;
+    p1z:apqcHierarchyId "7.3.4.6.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Providing tests to the workforce that will satisfy completion of certifications." ;
+    p1z:parentProcess apqc:PCF20125 .
+
+apqc:PCF20128 a p1z:Process ;
+    skos:prefLabel "Appraise experience qualifications" ;
+    p1z:apqcId "20128" ;
+    p1z:apqcHierarchyId "7.3.4.6.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Ascertaining the experience level needed to qualify for a specific job or certification within the organization. Some certificates require practical experience as well as training programs." ;
+    p1z:parentProcess apqc:PCF20125 .
+
+apqc:PCF20129 a p1z:Process ;
+    skos:prefLabel "Administer certificate issue and maintenance" ;
+    p1z:apqcId "20129" ;
+    p1z:apqcHierarchyId "7.3.4.6.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Administering certificates to all candidates that have successfully met experience qualifications, and passed all tests necessary to obtain the certificate." ;
+    p1z:parentProcess apqc:PCF20125 .
+
+apqc:PCF21440 a p1z:Process ;
+    skos:prefLabel "Manage flexible working" ;
+    p1z:apqcId "21440" ;
+    p1z:apqcHierarchyId "7.5.3.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creation and execution of a plan that might allow for work from home days, or alternate hours." ;
+    p1z:parentProcess apqc:PCF10508 .
+
+apqc:PCF21709 a p1z:Process ;
+    skos:prefLabel "Manage transportation programs and services" ;
+    p1z:apqcId "21709" ;
+    p1z:apqcHierarchyId "7.5.3.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Managing transportation-related programs and services provided to employees to support commuting, mobility, and work/life balance objectives." ;
+    p1z:parentProcess apqc:PCF10508 .
+
+apqc:PCF21695 a p1z:Process ;
+    skos:prefLabel "Align IT risk management with cybersecurity frameworks" ;
+    p1z:apqcId "21695" ;
+    p1z:apqcHierarchyId "8.3.1.10.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Include alignment with established cybersecurity frameworks like NIST CSF, ISO 27001, and ENISA risk management guidelines." ;
+    p1z:parentProcess apqc:PCF20715 .
+
+apqc:PCF21696 a p1z:Process ;
+    skos:prefLabel "Integrate IT and OT risk management strategies" ;
+    p1z:apqcId "21696" ;
+    p1z:apqcHierarchyId "8.3.1.10.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Ensure risk management processes are extended to cover OT systems and environments." ;
+    p1z:parentProcess apqc:PCF20715 .
+
+apqc:PCF21691 a p1z:Process ;
+    skos:prefLabel "Implement multi-factor authentication (MFA)" ;
+    p1z:apqcId "21691" ;
+    p1z:apqcHierarchyId "8.3.8.4.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Adopting MFA to ensure secure user authentication across all systems." ;
+    p1z:parentProcess apqc:PCF20760 .
+
+apqc:PCF21692 a p1z:Process ;
+    skos:prefLabel "Implement identity federation and single sign-on (SSO)" ;
+    p1z:apqcId "21692" ;
+    p1z:apqcHierarchyId "8.3.8.4.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Integrating identity federation and SSO solutions to enhance user experience and security." ;
+    p1z:parentProcess apqc:PCF20760 .
+
+apqc:PCF20810 a p1z:Process ;
+    skos:prefLabel "Assess and validate IT service/solution requirements" ;
+    p1z:apqcId "20810" ;
+    p1z:apqcHierarchyId "8.5.4.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating and validating the requirements and needs of IT service/solution." ;
+    p1z:parentProcess apqc:PCF20809 .
+
+apqc:PCF20811 a p1z:Process ;
+    skos:prefLabel "Create service/solution design" ;
+    p1z:apqcId "20811" ;
+    p1z:apqcHierarchyId "8.5.4.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Formulating a design for service/solution that helps an organization to meet its objectives. Develop a new framework for molding the service/solution processes into a coherent and structured form." ;
+    p1z:parentProcess apqc:PCF20809 .
+
+apqc:PCF20812 a p1z:Process ;
+    skos:prefLabel "Build and test IT service/solution components" ;
+    p1z:apqcId "20812" ;
+    p1z:apqcHierarchyId "8.5.4.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Building and testing new components required for the development of IT services and solutions." ;
+    p1z:parentProcess apqc:PCF20809 .
+
+apqc:PCF20813 a p1z:Process ;
+    skos:prefLabel "Integrate IT components and services" ;
+    p1z:apqcId "20813" ;
+    p1z:apqcHierarchyId "8.5.4.1.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Combining the newly built IT component along with IT services in order to gain optimum output." ;
+    p1z:parentProcess apqc:PCF20809 .
+
+apqc:PCF20814 a p1z:Process ;
+    skos:prefLabel "Execute IT service/solution validation" ;
+    p1z:apqcId "20814" ;
+    p1z:apqcHierarchyId "8.5.4.1.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Validating that the proposed IT service/solution is feasible and provides the needed services for the customer." ;
+    p1z:parentProcess apqc:PCF20809 .
+
+apqc:PCF20815 a p1z:Process ;
+    skos:prefLabel "Bundle service/solution deployment packaging" ;
+    p1z:apqcId "20815" ;
+    p1z:apqcHierarchyId "8.5.4.1.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating and implementing a strategy for the deployment of IT service/solution by defining all of the activities that make the IT function available for use. Define the deployment process, procedures, and tools. Select the most feasible and practical methodologies for the deployment process." ;
+    p1z:parentProcess apqc:PCF20809 .
+
+apqc:PCF20816 a p1z:Process ;
+    skos:prefLabel "Manage service/solution process exceptions" ;
+    p1z:apqcId "20816" ;
+    p1z:apqcHierarchyId "8.5.4.1.7" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying and resolving internal needs/inquiries for service/solution that cannot be resolved immediately. Research inquiries that require the need of exceptional solutions." ;
+    p1z:parentProcess apqc:PCF20809 .
+
+apqc:PCF20819 a p1z:Process ;
+    skos:prefLabel "Assess IT remediation" ;
+    p1z:apqcId "20819" ;
+    p1z:apqcHierarchyId "8.5.5.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluate plans to address information technology environmental adulteration for rectification efforts." ;
+    p1z:parentProcess apqc:PCF20818 .
+
+apqc:PCF20820 a p1z:Process ;
+    skos:prefLabel "Modify service/solution design" ;
+    p1z:apqcId "20820" ;
+    p1z:apqcHierarchyId "8.5.5.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Redesign the roadmap to seek solution or service with an overall process flow and impact timeframe." ;
+    p1z:parentProcess apqc:PCF20818 .
+
+apqc:PCF20821 a p1z:Process ;
+    skos:prefLabel "Perform IT service/solution remediation" ;
+    p1z:apqcId "20821" ;
+    p1z:apqcHierarchyId "8.5.5.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Administering the efforts and activities for IT service/solution remediation. This process element requires the organization to create plans for corrective action in collaboration with government agencies and pertinent professional services agencies which specialize in remediation efforts relevant to the organization's service/solution. Additionally, the organization needs to consult experts to validate the plan, determine resources allocation, resolve any legal concerns, and formulate a company-wide policy for IT service/solution remediation." ;
+    p1z:parentProcess apqc:PCF20818 .
+
+apqc:PCF20822 a p1z:Process ;
+    skos:prefLabel "Manage service/solution operations" ;
+    p1z:apqcId "20822" ;
+    p1z:apqcHierarchyId "8.5.5.1.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Understanding customer requirements. Managing services/solutions based on the requirements. Develop components for providing the requirements. Train resources to provide support. Confirm the customer experience post-sale. Evaluate the performance of service/solution. Communicate the results to the management." ;
+    p1z:parentProcess apqc:PCF20818 .
+
+apqc:PCF20823 a p1z:Process ;
+    skos:prefLabel "Prepare fixed/enhanced service/solution packaging" ;
+    p1z:apqcId "20823" ;
+    p1z:apqcHierarchyId "8.5.5.1.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Developing packaging for fixed/enhanced service/solution based on the standalone or bundled offerings to be used by the organization." ;
+    p1z:parentProcess apqc:PCF20818 .
+
+apqc:PCF20882 a p1z:Process ;
+    skos:prefLabel "Schedule service delivery resources" ;
+    p1z:apqcId "20882" ;
+    p1z:apqcHierarchyId "8.7.3.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Scheduling resources to provide service delivery to IT users. Ensure design, development, deployment, and operations are aligned with the business objectives." ;
+    p1z:parentProcess apqc:PCF20881 .
+
+apqc:PCF20883 a p1z:Process ;
+    skos:prefLabel "Maintain/optimize batch job schedule" ;
+    p1z:apqcId "20883" ;
+    p1z:apqcHierarchyId "8.7.3.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Maintaining and scheduling batch jobs to run in the background at a certain date and time." ;
+    p1z:parentProcess apqc:PCF20881 .
+
+apqc:PCF20884 a p1z:Process ;
+    skos:prefLabel "Schedule change/release windows" ;
+    p1z:apqcId "20884" ;
+    p1z:apqcHierarchyId "8.7.3.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determine the timely change or release of IT services or support. Assign periodic release/change to IT systems or services." ;
+    p1z:parentProcess apqc:PCF20881 .
+
+apqc:PCF20885 a p1z:Process ;
+    skos:prefLabel "Schedule/optimize backup and archive activities" ;
+    p1z:apqcId "20885" ;
+    p1z:apqcHierarchyId "8.7.3.1.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Schedule or optimize backup and archive activities for IT services and solutions. Use a backup system or application and archive operations data for future retrieval." ;
+    p1z:parentProcess apqc:PCF20881 .
+
+apqc:PCF20886 a p1z:Process ;
+    skos:prefLabel "Balance operational workloads across available infrastructure components" ;
+    p1z:apqcId "20886" ;
+    p1z:apqcHierarchyId "8.7.3.1.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Balancing workloads of all the processes and services that are provisioned to their internal or external clients, across available components of IT infrastructure. No component should be over or under utilized with the workflow of the IT operations." ;
+    p1z:parentProcess apqc:PCF20881 .
+
+apqc:PCF20887 a p1z:Process ;
+    skos:prefLabel "Determine specific problem support procedures" ;
+    p1z:apqcId "20887" ;
+    p1z:apqcHierarchyId "8.7.3.1.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining process and procedure to provide support for specific IT service problems." ;
+    p1z:parentProcess apqc:PCF20881 .
+
+apqc:PCF19575 a p1z:Process ;
+    skos:prefLabel "Manage interest rate market data" ;
+    p1z:apqcId "19575" ;
+    p1z:apqcHierarchyId "9.7.5.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Collecting and storing data that pertains to interest rate markets." ;
+    p1z:parentProcess apqc:PCF11209 .
+
+apqc:PCF19576 a p1z:Process ;
+    skos:prefLabel "Determine interest rate exposure for all markets" ;
+    p1z:apqcId "19576" ;
+    p1z:apqcHierarchyId "9.7.5.2.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying potential interest rate risks for all markets." ;
+    p1z:parentProcess apqc:PCF11209 .
+
+apqc:PCF19577 a p1z:Process ;
+    skos:prefLabel "Determine interest rate hedge requirements in accordance with risk policy" ;
+    p1z:apqcId "19577" ;
+    p1z:apqcHierarchyId "9.7.5.2.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Deciding the requirements on interest rate investments that are made by trading in futures or options market, on the basis of the accepted risk policy." ;
+    p1z:parentProcess apqc:PCF11209 .
+
+apqc:PCF19578 a p1z:Process ;
+    skos:prefLabel "Execute interest rate trades" ;
+    p1z:apqcId "19578" ;
+    p1z:apqcHierarchyId "9.7.5.2.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Performing trading on interest rates." ;
+    p1z:parentProcess apqc:PCF11209 .
+
+apqc:PCF19579 a p1z:Process ;
+    skos:prefLabel "Manage foreign exchange market data" ;
+    p1z:apqcId "19579" ;
+    p1z:apqcHierarchyId "9.7.5.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Handling and processing information about changes in foreign exchange rates." ;
+    p1z:parentProcess apqc:PCF11210 .
+
+apqc:PCF19580 a p1z:Process ;
+    skos:prefLabel "Determine foreign exchange exposure for all currencies" ;
+    p1z:apqcId "19580" ;
+    p1z:apqcHierarchyId "9.7.5.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Establishing potential foreign exchange risks for all currencies." ;
+    p1z:parentProcess apqc:PCF11210 .
+
+apqc:PCF19581 a p1z:Process ;
+    skos:prefLabel "Determine foreign exchange hedge requirements in accordance with risk policy" ;
+    p1z:apqcId "19581" ;
+    p1z:apqcHierarchyId "9.7.5.3.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Deciding the requirements on investments in foreign exchange made by trading in futures or options market, on the basis of current risk policy." ;
+    p1z:parentProcess apqc:PCF11210 .
+
+apqc:PCF19582 a p1z:Process ;
+    skos:prefLabel "Execute foreign exchange trades" ;
+    p1z:apqcId "19582" ;
+    p1z:apqcHierarchyId "9.7.5.3.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Executing all aspects for foreign exchange trade within foreign exchange market. This includes buying, selling, and exchanging currencies at the current or expressed price point." ;
+    p1z:parentProcess apqc:PCF11210 .
+
+apqc:PCF19583 a p1z:Process ;
+    skos:prefLabel "Manage foreign exchange balance sheet risk" ;
+    p1z:apqcId "19583" ;
+    p1z:apqcHierarchyId "9.7.5.3.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Overseeing the foreign exchange balance sheet with an eye towards potential risk. Risks include changes in conversion rates between the time the transaction occurred and when it is completed, or when transactions are made in a denomination other than that of the organization's base currency." ;
+    p1z:parentProcess apqc:PCF11210 .
+
+apqc:PCF19584 a p1z:Process ;
+    skos:prefLabel "Determine current customer exposures and limit exceptions" ;
+    p1z:apqcId "19584" ;
+    p1z:apqcHierarchyId "9.7.5.4.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Establishing ongoing risks that the customers face, and the exceptions to exceeded limits." ;
+    p1z:parentProcess apqc:PCF11211 .
+
+apqc:PCF19585 a p1z:Process ;
+    skos:prefLabel "Resolve customer exposure limit violations" ;
+    p1z:apqcId "19585" ;
+    p1z:apqcHierarchyId "9.7.5.4.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Settling cases that involve violations of customer exposure limit." ;
+    p1z:parentProcess apqc:PCF11211 .
+
+apqc:PCF19586 a p1z:Process ;
+    skos:prefLabel "Manage customer collateral" ;
+    p1z:apqcId "19586" ;
+    p1z:apqcHierarchyId "9.7.5.4.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Handling customer securities to recover loans that are not paid back." ;
+    p1z:parentProcess apqc:PCF11211 .
+
+apqc:PCF19587 a p1z:Process ;
+    skos:prefLabel "Perform annual customer credit reviews" ;
+    p1z:apqcId "19587" ;
+    p1z:apqcHierarchyId "9.7.5.4.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Conducting reviews to assess customer credit on a yearly basis. Introduce changes or make recommendations, if needed." ;
+    p1z:parentProcess apqc:PCF11211 .
+
+apqc:PCF19588 a p1z:Process ;
+    skos:prefLabel "Measure physical positions" ;
+    p1z:apqcId "19588" ;
+    p1z:apqcHierarchyId "9.7.5.5.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating investments made in some market to offset the risks of investing in a contrary or opposing market." ;
+    p1z:parentProcess apqc:PCF20137 .
+
+apqc:PCF19589 a p1z:Process ;
+    skos:prefLabel "Establish hedges" ;
+    p1z:apqcId "19589" ;
+    p1z:apqcHierarchyId "9.7.5.5.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining which hedge options to execute." ;
+    p1z:parentProcess apqc:PCF20137 .
+
+apqc:PCF19590 a p1z:Process ;
+    skos:prefLabel "Unwind hedges" ;
+    p1z:apqcId "19590" ;
+    p1z:apqcHierarchyId "9.7.5.5.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Closing out a position or cashing in derivatives early." ;
+    p1z:parentProcess apqc:PCF20137 .
+
+apqc:PCF11213 a p1z:Process ;
+    skos:prefLabel "Evaluate and refine hedging positions" ;
+    p1z:apqcId "11213" ;
+    p1z:apqcHierarchyId "9.7.5.5.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Examining options in the market for hedging investments. Select an option." ;
+    p1z:parentProcess apqc:PCF20137 .
+
+apqc:PCF11215 a p1z:Process ;
+    skos:prefLabel "Monitor credit" ;
+    p1z:apqcId "11215" ;
+    p1z:apqcHierarchyId "9.7.5.5.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Revising credit reports periodically for accurateness and changes that could be suggestive of duplicitous activity." ;
+    p1z:parentProcess apqc:PCF20137 .
+
+apqc:PCF18129 a p1z:Process ;
+    skos:prefLabel "Assess adequacy of insurance coverage" ;
+    p1z:apqcId "18129" ;
+    p1z:apqcHierarchyId "11.1.3.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating the changing needs for insurance coverage. Research available insurance providers and offerings." ;
+    p1z:parentProcess apqc:PCF16458 .
+
+apqc:PCF20140 a p1z:Process ;
+    skos:prefLabel "Identify published best practices" ;
+    p1z:apqcId "20140" ;
+    p1z:apqcHierarchyId "13.1.3.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Realizing those practices and procedures that are the most effective to the success of the business and making that information available." ;
+    p1z:parentProcess apqc:PCF16389 .
+
+apqc:PCF20141 a p1z:Process ;
+    skos:prefLabel "Identify additional metrics as required" ;
+    p1z:apqcId "20141" ;
+    p1z:apqcHierarchyId "13.1.4.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the need for additional performance indicators that would be necessary to successfully achieve the business goal." ;
+    p1z:parentProcess apqc:PCF16395 .
+
+apqc:PCF11117 a p1z:Process ;
+    skos:prefLabel "Identify project requirements and objectives" ;
+    p1z:apqcId "11117" ;
+    p1z:apqcHierarchyId "13.2.3.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Recognizing and defining what the project is ultimately supposed to do. Specify the capabilities, features, or attributes of the project's deliverables, as well as any kind of formal documentation." ;
+    p1z:parentProcess apqc:PCF16411 .
+
+apqc:PCF16412 a p1z:Process ;
+    skos:prefLabel "Identify project resource requirements" ;
+    p1z:apqcId "16412" ;
+    p1z:apqcHierarchyId "13.2.3.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Identifying the prerequisites of business projects. Identify the people with appropriate and applicable skills and competencies. Locate resources such as capital, facilities, equipment, material, and information required to accomplish the objectives of a specific project." ;
+    p1z:parentProcess apqc:PCF16411 .
+
+apqc:PCF11118 a p1z:Process ;
+    skos:prefLabel "Assess culture and readiness for project management approach" ;
+    p1z:apqcId "11118" ;
+    p1z:apqcHierarchyId "13.2.3.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating the culture and readiness of the organizational environment is order to implement the project management approach." ;
+    p1z:parentProcess apqc:PCF16411 .
+
+apqc:PCF11120 a p1z:Process ;
+    skos:prefLabel "Create business case" ;
+    p1z:apqcId "11120" ;
+    p1z:apqcHierarchyId "13.2.3.1.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating a document that includes the current situation, proposed solution, financial analysis, conclusion, etc. Convince a decision maker and investors to approve the project. Obtain funding." ;
+    p1z:parentProcess apqc:PCF16411 .
+
+apqc:PCF11121 a p1z:Process ;
+    skos:prefLabel "Develop project measures and indicators" ;
+    p1z:apqcId "11121" ;
+    p1z:apqcHierarchyId "13.2.3.1.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Developing procedures and indictors to assess performance of business projects. Design and develop metrics and indicators--such as cost, schedule, resources, risk, and quality--that exhibit the performance of the business projects." ;
+    p1z:parentProcess apqc:PCF16411 .
+
+apqc:PCF21454 a p1z:Process ;
+    skos:prefLabel "Prioritize and select projects for the portfolio" ;
+    p1z:apqcId "21454" ;
+    p1z:apqcHierarchyId "13.2.3.1.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Stack ranking of projects in the portfolio based upon preestablished criteria." ;
+    p1z:parentProcess apqc:PCF16411 .
+
+apqc:PCF11123 a p1z:Process ;
+    skos:prefLabel "Define roles and resources" ;
+    p1z:apqcId "11123" ;
+    p1z:apqcHierarchyId "13.2.3.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Outlining the resources and their roles in the business projects." ;
+    p1z:parentProcess apqc:PCF16413 .
+
+apqc:PCF20142 a p1z:Process ;
+    skos:prefLabel "Acquire/secure project resources" ;
+    p1z:apqcId "20142" ;
+    p1z:apqcHierarchyId "13.2.3.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Procuring the necessary resources outlined in Define roles and resources [11123]" ;
+    p1z:parentProcess apqc:PCF16413 .
+
+apqc:PCF11124 a p1z:Process ;
+    skos:prefLabel "Identify specific IT requirements" ;
+    p1z:apqcId "11124" ;
+    p1z:apqcHierarchyId "13.2.3.3.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining the IT requirements for specific business projects. Identify the requirements of computers and telecommunications equipment to store, retrieve, transmit, and manipulate data related to the project. Consider factors such as functional requirements, design requirements, project phases, and project schedule." ;
+    p1z:parentProcess apqc:PCF16413 .
+
+apqc:PCF11125 a p1z:Process ;
+    skos:prefLabel "Create training and communication plans" ;
+    p1z:apqcId "11125" ;
+    p1z:apqcHierarchyId "13.2.3.3.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Designing a plan for equipping the project team with the necessary skills and abilities to fulfill their roles and responsibilities in the project effectively and efficiently. Offer formal training, mentoring, or coaching. Initiate informal conversations. Communicate messages during the project." ;
+    p1z:parentProcess apqc:PCF16413 .
+
+apqc:PCF11127 a p1z:Process ;
+    skos:prefLabel "Design recognition and reward approaches" ;
+    p1z:apqcId "11127" ;
+    p1z:apqcHierarchyId "13.2.3.3.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating a plan for recognizing and rewarding extraordinary performances within the business projects. Use incentives, bonuses, and certificates for recognition and rewarding purposes." ;
+    p1z:parentProcess apqc:PCF16413 .
+
+apqc:PCF11128 a p1z:Process ;
+    skos:prefLabel "Design and plan launch of project" ;
+    p1z:apqcId "11128" ;
+    p1z:apqcHierarchyId "13.2.3.3.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Creating a plan specifying when to initiate the project, and introducing it to the target audience. Clearly define the project team, objectives, timelines, and milestone." ;
+    p1z:parentProcess apqc:PCF16413 .
+
+apqc:PCF11129 a p1z:Process ;
+    skos:prefLabel "Deploy the project" ;
+    p1z:apqcId "11129" ;
+    p1z:apqcHierarchyId "13.2.3.3.7" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Putting the project into position by effectively bringing it into action." ;
+    p1z:parentProcess apqc:PCF16413 .
+
+apqc:PCF11131 a p1z:Process ;
+    skos:prefLabel "Evaluate impact of project management (strategy and projects) on measures and outcomes" ;
+    p1z:apqcId "11131" ;
+    p1z:apqcHierarchyId "13.2.3.4.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Assessing the impact of business project management on the measures and outcomes of the projects. Gauge non-financial measures, frequency of measurement, action plan, etc." ;
+    p1z:parentProcess apqc:PCF16414 .
+
+apqc:PCF16415 a p1z:Process ;
+    skos:prefLabel "Report the status of project" ;
+    p1z:apqcId "16415" ;
+    p1z:apqcHierarchyId "13.2.3.4.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Recording and documenting the current status and position of the project. Record and report items such as completed tasks, incomplete tasks, planned tasks, and problems faced." ;
+    p1z:parentProcess apqc:PCF16414 .
+
+apqc:PCF16416 a p1z:Process ;
+    skos:prefLabel "Manage project scope" ;
+    p1z:apqcId "16416" ;
+    p1z:apqcHierarchyId "13.2.3.4.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Determining and documenting a list of specific project goals, deliverables, tasks, costs, and deadlines. Use the scope statement to explain the boundaries of the project. Assign responsibilities for team members. Set up procedures for verifying and approving the completed tasks." ;
+    p1z:parentProcess apqc:PCF16414 .
+
+apqc:PCF11132 a p1z:Process ;
+    skos:prefLabel "Promote and sustain activity and involvement" ;
+    p1z:apqcId "11132" ;
+    p1z:apqcHierarchyId "13.2.3.4.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Encouraging and sustaining the activities and involvement while executing projects. Promote the execution activities of the projects. Encourage employee involvement in project implementation." ;
+    p1z:parentProcess apqc:PCF16414 .
+
+apqc:PCF21455 a p1z:Process ;
+    skos:prefLabel "Conduct Project Reviews with Program Managers and other stakeholders" ;
+    p1z:apqcId "21455" ;
+    p1z:apqcHierarchyId "13.2.3.4.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Hold post project reviews, lessons learned, or After Action Reviews (AARs) at the end of each project to understand what could be improved during future projects." ;
+    p1z:parentProcess apqc:PCF16414 .
+
+apqc:PCF11133 a p1z:Process ;
+    skos:prefLabel "Realign and refresh project management strategy and approaches" ;
+    p1z:apqcId "11133" ;
+    p1z:apqcHierarchyId "13.2.3.4.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Reorganizing and stimulating the approach and strategy for managing business projects. Make improvements based on the project scope and on findings from Evaluate the impact of project management (strategy and projects) on measures and outcomes [11131]." ;
+    p1z:parentProcess apqc:PCF16414 .
+
+apqc:PCF21456 a p1z:Process ;
+    skos:prefLabel "Adjust project plan as needed" ;
+    p1z:apqcId "21456" ;
+    p1z:apqcHierarchyId "13.2.3.4.7" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Changes to project plans based upon internal and or external influences on the project.  This would include the update to the project plan file, as well as the communication to the team." ;
+    p1z:parentProcess apqc:PCF16414 .
+
+apqc:PCF17476 a p1z:Process ;
+    skos:prefLabel "Define process steps for controls (or integration points)" ;
+    p1z:apqcId "17476" ;
+    p1z:apqcHierarchyId "13.3.1.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Establishing the steps for developing quality controls. Conduct Alpha testing. Have the product team conduct rework. Send the product/service for Beta testing, and carry on rework as needed." ;
+    p1z:parentProcess apqc:PCF17475 .
+
+apqc:PCF17477 a p1z:Process ;
+    skos:prefLabel "Define sampling plan" ;
+    p1z:apqcId "17477" ;
+    p1z:apqcHierarchyId "13.3.1.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Establishing a detailed summary including measures, on which material, in what manner, and by whom. Identify the parameters to be measured, the range of possible values, and the required resolution. Provide a sampling scheme that details how and when samples will be taken. Select sample sizes. Assign roles and responsibilities." ;
+    p1z:parentProcess apqc:PCF17475 .
+
+apqc:PCF17478 a p1z:Process ;
+    skos:prefLabel "Identify measurement methods" ;
+    p1z:apqcId "17478" ;
+    p1z:apqcHierarchyId "13.3.1.3.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Using tools to measure quality. Use tools such as quality improvement oversight system tool, performance measurement tools, consumer information models/guides, and validation tools to effectively determine the quality levels." ;
+    p1z:parentProcess apqc:PCF17475 .
+
+apqc:PCF17479 a p1z:Process ;
+    skos:prefLabel "Define required competencies" ;
+    p1z:apqcId "17479" ;
+    p1z:apqcHierarchyId "13.3.1.3.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining the competencies required for developing quality controls. Define the required competencies including compliance management, audit management, and document control and document management." ;
+    p1z:parentProcess apqc:PCF17475 .
+
+apqc:PCF17484 a p1z:Process ;
+    skos:prefLabel "Conduct test and collect data" ;
+    p1z:apqcId "17484" ;
+    p1z:apqcHierarchyId "13.3.2.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Evaluating quality performance through periodic or episodic testing against the established standards for quality characteristics. For periodic testing, design a schedule with sufficient time to make any required adjustments to the process or system to maintain the desired level of quality. For episodic testing, conduct a test whenever a known non-conformance or fault occurs, which results in outputs or outcomes known to be unsatisfactory to performance requirements." ;
+    p1z:parentProcess apqc:PCF17483 .
+
+apqc:PCF17485 a p1z:Process ;
+    skos:prefLabel "Record result(s)" ;
+    p1z:apqcId "17485" ;
+    p1z:apqcHierarchyId "13.3.2.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Maintaining and recording the results of Test against the quality plan [17483] electronically and in standard formats. Assign ownership to a designated function or role." ;
+    p1z:parentProcess apqc:PCF17483 .
+
+apqc:PCF17486 a p1z:Process ;
+    skos:prefLabel "Determine disposition of result(s)" ;
+    p1z:apqcId "17486" ;
+    p1z:apqcHierarchyId "13.3.2.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Deciding whether to take any additional actions based on the results of quality tests. Initiate a quarantine disposition and relocated inventory, scrap workflow item and scrap transaction, rework operation, net-able and nonnet-able items, and the activity list." ;
+    p1z:parentProcess apqc:PCF17483 .
+
+apqc:PCF17488 a p1z:Process ;
+    skos:prefLabel "Assess sample significance" ;
+    p1z:apqcId "17488" ;
+    p1z:apqcHierarchyId "13.3.2.2.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Assessing the significance of the sample chosen for the test in order to determine whether or not the sample is representative of the larger output or outcome. Determine if the sample meets or does not meet the requirements. Identify the conditions for acceptance, rejection, remediation, and prevention." ;
+    p1z:parentProcess apqc:PCF17487 .
+
+apqc:PCF17489 a p1z:Process ;
+    skos:prefLabel "Summarize result(s)" ;
+    p1z:apqcId "17489" ;
+    p1z:apqcHierarchyId "13.3.2.2.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Outlining the major facts and figures of the quality test results in order to provide insights and information. Use charts, tables, statistical test results, and written findings and conclusions in a summary of results." ;
+    p1z:parentProcess apqc:PCF17487 .
+
+apqc:PCF17490 a p1z:Process ;
+    skos:prefLabel "Recommend actions" ;
+    p1z:apqcId "17490" ;
+    p1z:apqcHierarchyId "13.3.2.2.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Recommending measures for improvement. Assess the summarized results to identify areas which can be improved. Suggest actions to management for improving the quality plan basis on the results of the tests." ;
+    p1z:parentProcess apqc:PCF17487 .
+
+apqc:PCF17491 a p1z:Process ;
+    skos:prefLabel "Decide next steps" ;
+    p1z:apqcId "17491" ;
+    p1z:apqcHierarchyId "13.3.2.2.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Selecting the subsequent actions that the organization can adopt for improving the enterprise quality. Select measures and recommended actions for managing the enterprise quality." ;
+    p1z:parentProcess apqc:PCF17487 .
+
+apqc:PCF17505 a p1z:Process ;
+    skos:prefLabel "Reward quality excellence" ;
+    p1z:apqcId "17505" ;
+    p1z:apqcHierarchyId "13.3.4.6.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Provisioning rewards for achieving quality excellence. Provide monetary and nonmonetary rewards such as compensation, vacations, gift cards, and reimbursements to employees in in recognition of their services, efforts, and achievements in quality excellence." ;
+    p1z:parentProcess apqc:PCF17504 .
+
+apqc:PCF17506 a p1z:Process ;
+    skos:prefLabel "Create and maintain quality partnerships" ;
+    p1z:apqcId "17506" ;
+    p1z:apqcHierarchyId "13.3.4.6.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Establishing and maintaining partnerships with third-party sources to achieve quality excellence. Source and evaluate third-party sources both public and private to ensure that the most effective and efficient partnerships are formed." ;
+    p1z:parentProcess apqc:PCF17504 .
+
+apqc:PCF17507 a p1z:Process ;
+    skos:prefLabel "Maintain talent capabilities and competencies" ;
+    p1z:apqcId "17507" ;
+    p1z:apqcHierarchyId "13.3.4.6.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Maintaining a common denominator for the competency level within the organization's talent circle. Conduct training sessions, skill development activities, and quality excellence activities to ensure that the resources of the organization are competent enough and have the capabilities to achieve the required level of quality." ;
+    p1z:parentProcess apqc:PCF17504 .
+
+apqc:PCF17508 a p1z:Process ;
+    skos:prefLabel "Incorporate EQMS messaging into communication channels" ;
+    p1z:apqcId "17508" ;
+    p1z:apqcHierarchyId "13.3.4.6.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Assimilating all the communication related to the EQMS into the organization's already established communication channels." ;
+    p1z:parentProcess apqc:PCF17504 .
+
+apqc:PCF17509 a p1z:Process ;
+    skos:prefLabel "Assure independent EQMS management access to appropriate authority in the organization" ;
+    p1z:apqcId "17509" ;
+    p1z:apqcHierarchyId "13.3.4.6.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Ensuring EQMS access to the person in charge of the quality management process. Establish who has the authority to manage the EQMS. Ensure access of EQMS to only the person(s) in authority." ;
+    p1z:parentProcess apqc:PCF17504 .
+
+apqc:PCF17510 a p1z:Process ;
+    skos:prefLabel "Transfer proven EQMS methods" ;
+    p1z:apqcId "17510" ;
+    p1z:apqcHierarchyId "13.3.4.6.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Recording and transferring the best practices and proven methods associated with enterprise quality management systems (EQMS) that can be leveraged in improving the organization's framework. Record proven methodologies and approaches with the objective of communicating them for upgrading, refining, and enhancing the organization's systems." ;
+    p1z:parentProcess apqc:PCF17504 .
+
+apqc:PCF21591 a p1z:Process ;
+    skos:prefLabel "Define sustainability disclosure requirements" ;
+    p1z:apqcId "21591" ;
+    p1z:apqcHierarchyId "13.10.1.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining and communicating sustainability disclosure requirements. Clarify and align disclosure requirements to other organizational reporting requirements and needs. Integrate preparation and reporting activities." ;
+    p1z:parentProcess apqc:PCF21590 .
+
+apqc:PCF21592 a p1z:Process ;
+    skos:prefLabel "Define sustainability governance requirements" ;
+    p1z:apqcId "21592" ;
+    p1z:apqcHierarchyId "13.10.1.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining governance requirements for sustainability. Include structure, roles, alignment to organization models, processes and standards to be applied." ;
+    p1z:parentProcess apqc:PCF21590 .
+
+apqc:PCF21593 a p1z:Process ;
+    skos:prefLabel "Define sustainability functional and performance requirements" ;
+    p1z:apqcId "21593" ;
+    p1z:apqcHierarchyId "13.10.1.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Defining functional and performance requirements for sustainability. Align with ESG strategies, goals, and the implementation of sustainability efforts across the organization, provide a roadmap and visibility to shared and collective requirements." ;
+    p1z:parentProcess apqc:PCF21590 .
+
+apqc:PCF21602 a p1z:Process ;
+    skos:prefLabel "Measure sustainability performance" ;
+    p1z:apqcId "21602" ;
+    p1z:apqcHierarchyId "13.10.2.3.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Measuring sustainability performance. Setup, collect, and validate sustainability data. Conduct audits and inspections. Evaluate results to requirements and targets. Identify and track resolution of gaps and variances." ;
+    p1z:parentProcess apqc:PCF21601 .
+
+apqc:PCF21603 a p1z:Process ;
+    skos:prefLabel "Prepare sustainability statements" ;
+    p1z:apqcId "21603" ;
+    p1z:apqcHierarchyId "13.10.2.3.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Preparing sustainability statements. Given the multitude of potential audiences for reporting, alignment and consistency of sustainability statements provides clarity and reusability for those audiences." ;
+    p1z:parentProcess apqc:PCF21601 .
+

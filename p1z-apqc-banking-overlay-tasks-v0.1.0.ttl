@@ -1,0 +1,80 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix p1z:  <https://ontology.pointonezero.com/strategy/core#> .
+@prefix p1zv: <https://ontology.pointonezero.com/strategy/vocab#> .
+@prefix apqc: <https://ontology.pointonezero.com/strategy/apqc#> .
+
+<https://ontology.pointonezero.com/strategy/apqc/banking/tasks> a owl:Ontology ;
+    dct:title "P1Z Industry Overlay Tasks: APQC Banking PCF (Level 5, dormant)" ;
+    owl:versionInfo "0.1.0" ;
+    dct:source "APQC Process Classification Framework (PCF), Banking, Excel Version 8.0" ;
+    dct:description "Dormant level-5 task extension of the Banking overlay, loaded only by consumers needing task-level granularity, per the depth-extension rule. Companion to the Banking overlay module." ;
+    dct:rights "APQC Process Classification Framework (PCF) is an open standard developed by APQC, a nonprofit that promotes benchmarking and best practices worldwide. The PCF is intended to facilitate organizational improvement through process management and benchmarking, regardless of industry, size, or geography. To download the full PCF or industry-specific versions of the PCF, as well as associated measures and benchmarking, please visit www.apqc.org/pcf." .
+
+apqc:PCF11212 a p1z:Process ;
+    skos:prefLabel "Develop and execute hedging transactions" ;
+    p1z:apqcId "11212" ;
+    p1z:apqcHierarchyId "9.7.5.6.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    skos:definition "Preparing and buying derivatives, such as options and futures contracts, to limit investment risks." ;
+    p1z:parentProcess apqc:PCF20137 .
+
+apqc:PCF14082 a p1z:Process ;
+    skos:prefLabel "Analyze market risk history" ;
+    p1z:apqcId "14082" ;
+    p1z:apqcHierarchyId "11.1.5.1.1" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17465 .
+
+apqc:PCF14083 a p1z:Process ;
+    skos:prefLabel "Forecast market risk requirement" ;
+    p1z:apqcId "14083" ;
+    p1z:apqcHierarchyId "11.1.5.1.2" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17465 .
+
+apqc:PCF14156 a p1z:Process ;
+    skos:prefLabel "Manage global market limits" ;
+    p1z:apqcId "14156" ;
+    p1z:apqcHierarchyId "11.1.5.1.3" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17465 .
+
+apqc:PCF14157 a p1z:Process ;
+    skos:prefLabel "Manage early-warning system" ;
+    p1z:apqcId "14157" ;
+    p1z:apqcHierarchyId "11.1.5.1.4" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17465 .
+
+apqc:PCF14158 a p1z:Process ;
+    skos:prefLabel "Manage market data" ;
+    p1z:apqcId "14158" ;
+    p1z:apqcHierarchyId "11.1.5.1.5" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17465 .
+
+apqc:PCF14159 a p1z:Process ;
+    skos:prefLabel "Model internal market risk" ;
+    p1z:apqcId "14159" ;
+    p1z:apqcHierarchyId "11.1.5.1.6" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17465 .
+
+apqc:PCF14160 a p1z:Process ;
+    skos:prefLabel "Perform back-testing" ;
+    p1z:apqcId "14160" ;
+    p1z:apqcHierarchyId "11.1.5.1.7" ;
+    p1z:apqcLevel 5 ;
+    p1z:metricsAvailable false ;
+    p1z:parentProcess apqc:PCF17465 .
+

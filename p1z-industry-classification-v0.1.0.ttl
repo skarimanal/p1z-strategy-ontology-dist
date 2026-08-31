@@ -1,0 +1,247 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix p1z:  <https://ontology.pointonezero.com/strategy/core#> .
+@prefix p1zn: <https://ontology.pointonezero.com/strategy/industry-classification#> .
+
+<https://ontology.pointonezero.com/strategy/industry-classification> a owl:Ontology ;
+    dct:title "P1Z Industry Classification Vocabulary (NAICS / NACE)" ;
+    owl:versionInfo "0.1.0" ;
+    dct:source "North American Industry Classification System (NAICS) 2022, U.S. Census Bureau; Statistical classification of economic activities in the European Community (NACE) Rev. 2, Eurostat" ;
+    dct:description "A standalone company-classification vocabulary, deliberately outside the process-taxonomy pipeline: NAICS classifies what a company is; APQC classifies what work is done. Two SKOS concept schemes at the top level of each standard (20 NAICS sectors, 21 NACE Rev. 2 sections) with skos:closeMatch alignments, used to tag Company and StrategyBinding instances via industryClassification, and later benchmark observations, since benchmark sources differ on which standard they report against. NAICS is primary given the US client base. Publisher codes are the stable keys (URIs and skos:notation). Deeper codes (subsectors through 6-digit national industries) are added per engagement need under the same schemes, never in bulk. Fast-drifting vocabularies version independently of the core; note NACE Rev. 2.1 applies in EU statistics from 2025 and adoption here is a governed change to this file alone." .
+
+p1zn:NaicsScheme a skos:ConceptScheme ;
+    skos:prefLabel "NAICS 2022 Sectors" ;
+    skos:definition "The 20 sectors of NAICS 2022. Partition principle: the primary economic activity of the establishment." .
+
+p1zn:NaceScheme a skos:ConceptScheme ;
+    skos:prefLabel "NACE Rev. 2 Sections" ;
+    skos:definition "The 21 sections of NACE Rev. 2. Partition principle: the principal economic activity of the unit." .
+
+p1zn:N11 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "11" ;
+    skos:prefLabel "Agriculture, Forestry, Fishing and Hunting" ;
+    skos:closeMatch p1zn:NACE-A .
+
+p1zn:N21 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "21" ;
+    skos:prefLabel "Mining, Quarrying, and Oil and Gas Extraction" ;
+    skos:closeMatch p1zn:NACE-B .
+
+p1zn:N22 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "22" ;
+    skos:prefLabel "Utilities" ;
+    skos:closeMatch p1zn:NACE-D ;
+    skos:closeMatch p1zn:NACE-E .
+
+p1zn:N23 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "23" ;
+    skos:prefLabel "Construction" ;
+    skos:closeMatch p1zn:NACE-F .
+
+p1zn:N31-33 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "31-33" ;
+    skos:prefLabel "Manufacturing" ;
+    skos:closeMatch p1zn:NACE-C .
+
+p1zn:N42 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "42" ;
+    skos:prefLabel "Wholesale Trade" ;
+    skos:closeMatch p1zn:NACE-G .
+
+p1zn:N44-45 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "44-45" ;
+    skos:prefLabel "Retail Trade" ;
+    skos:closeMatch p1zn:NACE-G .
+
+p1zn:N48-49 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "48-49" ;
+    skos:prefLabel "Transportation and Warehousing" ;
+    skos:closeMatch p1zn:NACE-H .
+
+p1zn:N51 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "51" ;
+    skos:prefLabel "Information" ;
+    skos:closeMatch p1zn:NACE-J .
+
+p1zn:N52 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "52" ;
+    skos:prefLabel "Finance and Insurance" ;
+    skos:closeMatch p1zn:NACE-K .
+
+p1zn:N53 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "53" ;
+    skos:prefLabel "Real Estate and Rental and Leasing" ;
+    skos:closeMatch p1zn:NACE-L .
+
+p1zn:N54 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "54" ;
+    skos:prefLabel "Professional, Scientific, and Technical Services" ;
+    skos:closeMatch p1zn:NACE-M .
+
+p1zn:N55 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "55" ;
+    skos:prefLabel "Management of Companies and Enterprises" ;
+    skos:closeMatch p1zn:NACE-M .
+
+p1zn:N56 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "56" ;
+    skos:prefLabel "Administrative and Support and Waste Management and Remediation Services" ;
+    skos:closeMatch p1zn:NACE-N .
+
+p1zn:N61 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "61" ;
+    skos:prefLabel "Educational Services" ;
+    skos:closeMatch p1zn:NACE-P .
+
+p1zn:N62 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "62" ;
+    skos:prefLabel "Health Care and Social Assistance" ;
+    skos:closeMatch p1zn:NACE-Q .
+
+p1zn:N71 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "71" ;
+    skos:prefLabel "Arts, Entertainment, and Recreation" ;
+    skos:closeMatch p1zn:NACE-R .
+
+p1zn:N72 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "72" ;
+    skos:prefLabel "Accommodation and Food Services" ;
+    skos:closeMatch p1zn:NACE-I .
+
+p1zn:N81 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "81" ;
+    skos:prefLabel "Other Services (except Public Administration)" ;
+    skos:closeMatch p1zn:NACE-S .
+
+p1zn:N92 a skos:Concept ;
+    skos:inScheme p1zn:NaicsScheme ;
+    skos:notation "92" ;
+    skos:prefLabel "Public Administration" ;
+    skos:closeMatch p1zn:NACE-O .
+
+p1zn:NACE-A a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "A" ;
+    skos:prefLabel "Agriculture, forestry and fishing" .
+
+p1zn:NACE-B a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "B" ;
+    skos:prefLabel "Mining and quarrying" .
+
+p1zn:NACE-C a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "C" ;
+    skos:prefLabel "Manufacturing" .
+
+p1zn:NACE-D a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "D" ;
+    skos:prefLabel "Electricity, gas, steam and air conditioning supply" .
+
+p1zn:NACE-E a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "E" ;
+    skos:prefLabel "Water supply; sewerage, waste management and remediation activities" .
+
+p1zn:NACE-F a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "F" ;
+    skos:prefLabel "Construction" .
+
+p1zn:NACE-G a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "G" ;
+    skos:prefLabel "Wholesale and retail trade; repair of motor vehicles and motorcycles" .
+
+p1zn:NACE-H a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "H" ;
+    skos:prefLabel "Transportation and storage" .
+
+p1zn:NACE-I a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "I" ;
+    skos:prefLabel "Accommodation and food service activities" .
+
+p1zn:NACE-J a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "J" ;
+    skos:prefLabel "Information and communication" .
+
+p1zn:NACE-K a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "K" ;
+    skos:prefLabel "Financial and insurance activities" .
+
+p1zn:NACE-L a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "L" ;
+    skos:prefLabel "Real estate activities" .
+
+p1zn:NACE-M a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "M" ;
+    skos:prefLabel "Professional, scientific and technical activities" .
+
+p1zn:NACE-N a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "N" ;
+    skos:prefLabel "Administrative and support service activities" .
+
+p1zn:NACE-O a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "O" ;
+    skos:prefLabel "Public administration and defence; compulsory social security" .
+
+p1zn:NACE-P a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "P" ;
+    skos:prefLabel "Education" .
+
+p1zn:NACE-Q a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "Q" ;
+    skos:prefLabel "Human health and social work activities" .
+
+p1zn:NACE-R a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "R" ;
+    skos:prefLabel "Arts, entertainment and recreation" .
+
+p1zn:NACE-S a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "S" ;
+    skos:prefLabel "Other service activities" .
+
+p1zn:NACE-T a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "T" ;
+    skos:prefLabel "Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use" .
+
+p1zn:NACE-U a skos:Concept ;
+    skos:inScheme p1zn:NaceScheme ;
+    skos:notation "U" ;
+    skos:prefLabel "Activities of extraterritorial organisations and bodies" .
+
